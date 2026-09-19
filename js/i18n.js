@@ -51,8 +51,7 @@
         hero: {
           tag: "Le Projet",
           title: "Un exosquelette conçu par et pour l'ÉTS",
-          lead: "SynapsÉTS est le seul club étudiant biomédical de l'École de technologie supérieure. En développement actif, l'équipe améliore son exosquelette d'assistance à la marche à chaque session.",
-          exoCaption: "Schéma technique — module de cheville actuellement en développement."
+          lead: "SynapsÉTS est le seul club étudiant biomédical de l'École de technologie supérieure. En développement actif, l'équipe améliore son exosquelette d'assistance à la marche à chaque session."
         },
         intro: {
           tag: "Vue d'ensemble",
@@ -178,8 +177,7 @@
         hero: {
           tag: "The Project",
           title: "An exoskeleton built by and for ÉTS",
-          lead: "SynapsÉTS is the only biomedical student club at École de technologie supérieure. In active development, the team improves its walking-assistance exoskeleton every semester.",
-          exoCaption: "Technical schematic — ankle module currently in development."
+          lead: "SynapsÉTS is the only biomedical student club at École de technologie supérieure. In active development, the team improves its walking-assistance exoskeleton every semester."
         },
         intro: {
           tag: "Overview",

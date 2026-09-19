@@ -61,15 +61,12 @@
   <!-- HERO — vidéo en arrière-plan -->
   <section class="hero">
     <div class="hero-media" id="hero-media">
-      <!-- Repli visuel tant que la vidéo n'est pas chargée : animation SVG d'exosquelette -->
-      <div class="hero-fallback" id="hero-exo-mount" aria-hidden="true"></div>
-
       <!--
         Emplacement de la vraie vidéo d'atelier (étudiants au travail sur l'exosquelette),
         façon Baja ÉTS. Déposer le fichier ici : assets/hero-video.mp4
         (autoplay + muted + loop + playsinline, sans contrôles). Tant que le
-        fichier n'existe pas, cette balise échoue silencieusement et
-        l'animation SVG ci-dessus reste visible en arrière-plan.
+        fichier n'existe pas, cette balise échoue silencieusement et le
+        dégradé sombre défini sur .hero-media reste visible en arrière-plan.
       -->
       <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.svg">
         <source src="assets/hero-video.mp4" type="video/mp4">
@@ -208,10 +205,6 @@
 </footer>
 
 <script src="js/i18n.js"></script>
-<script src="js/exo-animation.js"></script>
 <script src="js/main.js"></script>
-<script>
-  if (window.SynapsETSExo) window.SynapsETSExo.mount("hero-exo-mount", { highlightAnkle: false });
-</script>
 </body>
 </html>
