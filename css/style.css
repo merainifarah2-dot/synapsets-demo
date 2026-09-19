@@ -400,22 +400,31 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   max-width: 480px;
 }
 
-/* ---------- Exosquelette : animation SVG (accueil + projet) ---------- */
+/* ---------- Exosquelette : animation SVG (accueil + projet) ----------
+   Structure mécanique : deux rails structurels parallèles par segment
+   (cuisse/tibia), boîtiers d'articulation, actionneurs latéraux, sangles
+   et plaque de pied — pensée pour lire clairement comme un vrai
+   exosquelette de marche vu de profil, pas comme un simple trait. */
 .exo-anim { width: 100%; height: 100%; }
 .exo-anim svg { width: 100%; height: 100%; display: block; }
-.exo-line { fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: round; }
-.exo-line-dim { stroke: rgba(255,255,255,0.4); }
-.exo-joint { fill: var(--red); }
-.exo-joint-dim { fill: rgba(227,30,36,0.55); }
+
+.exo-rail { fill: none; stroke: #fff; stroke-width: 4; stroke-linecap: round; }
+.exo-strap { fill: none; stroke: rgba(255,255,255,0.55); stroke-width: 2.5; stroke-linecap: round; }
+.exo-joint { fill: var(--red); stroke: rgba(7,22,48,0.5); stroke-width: 1; }
+.exo-bolt-center { fill: rgba(7,22,48,0.65); }
+.exo-bolt { fill: rgba(255,255,255,0.55); }
+.exo-actuator { fill: rgba(255,255,255,0.16); stroke: rgba(255,255,255,0.55); stroke-width: 1.4; }
+.exo-foot { fill: rgba(255,255,255,0.92); stroke: rgba(255,255,255,0.92); stroke-width: 1; stroke-linejoin: round; }
+.exo-sole { stroke: var(--red); stroke-width: 2.6; stroke-linecap: round; }
 .exo-guide { fill: none; stroke: rgba(255,255,255,0.16); stroke-width: 1; stroke-dasharray: 4 6; }
-.exo-mount { fill: rgba(255,255,255,0.07); stroke: rgba(255,255,255,0.45); stroke-width: 1.5; }
+.exo-mount { fill: rgba(255,255,255,0.1); stroke: rgba(255,255,255,0.5); stroke-width: 1.6; }
 .exo-ankle-ring { fill: none; stroke: var(--red); stroke-width: 1.4; stroke-dasharray: 3 4; transform-box: fill-box; transform-origin: center; }
+.exo-leg-b { opacity: 0.4; }
 
 .exo-thigh-a, .exo-thigh-b { animation: exoThigh 1.9s ease-in-out infinite; }
 .exo-shin-a, .exo-shin-b { animation: exoShin 1.9s ease-in-out infinite; }
 .exo-foot-a, .exo-foot-b { animation: exoFoot 1.9s ease-in-out infinite; }
 .exo-thigh-b, .exo-shin-b, .exo-foot-b { animation-delay: -0.95s; }
-.exo-leg-b { opacity: 0.45; }
 
 @keyframes exoThigh { 0% { transform: rotate(-16deg); } 50% { transform: rotate(24deg); } 100% { transform: rotate(-16deg); } }
 @keyframes exoShin { 0% { transform: rotate(4deg); } 25% { transform: rotate(-38deg); } 55% { transform: rotate(2deg); } 80% { transform: rotate(12deg); } 100% { transform: rotate(4deg); } }
