@@ -6,236 +6,154 @@
 <title>SynapsÉTS — Club biomédical de l'ÉTS Montréal | Exosquelette</title>
 <meta name="description" content="SynapsÉTS est le seul club étudiant biomédical de l'ÉTS Montréal. Nous concevons un exosquelette pour améliorer la mobilité et l'indépendance des personnes ayant des difficultés de mobilité.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A1F44'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial, sans-serif' font-weight='700' fill='%23E31E24' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#accueil">Aller au contenu principal</a>
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+<div class="top-bar"></div>
 
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a href="#accueil" class="brand" aria-label="SynapsÉTS — Accueil">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="36" height="36">
-          <rect width="40" height="40" rx="9" fill="#0A1F44"/>
-          <circle cx="12" cy="14" r="3" fill="#E31E24"/>
-          <circle cx="28" cy="14" r="3" fill="#ffffff"/>
-          <circle cx="20" cy="28" r="3" fill="#E31E24"/>
-          <path d="M12 14L28 14M12 14L20 28M28 14L20 28" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-      </span>
-      <span class="brand-name">Synaps<span class="accent">É</span>TS</span>
+    <a href="index.html" class="brand" aria-label="SynapsÉTS — Accueil">
+      <!-- Placeholder texte : remplacer par <img src="assets/logo.svg" alt="SynapsÉTS" class="brand-logo"> quand le logo sera fourni -->
+      <span class="brand-logo-placeholder">Synaps<span class="accent">É</span>TS</span>
     </a>
 
-    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#projet">Le Projet</a></li>
-        <li><a href="#equipe">L'Équipe</a></li>
-        <li><a href="#partenaires">Partenaires</a></li>
-        <li><a href="#rejoindre">Rejoindre</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="projet.html" data-i18n="nav.project">Le Projet</a></li>
+          <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
+          <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
+          <li><a href="rejoindre.html" data-i18n="nav.join">Rejoindre</a></li>
+        </ul>
+      </nav>
 
-    <a href="#rejoindre" class="btn btn-primary btn-nav">Rejoindre le club</a>
+      <div class="lang-switch" role="group" aria-label="Choix de la langue / Language selector">
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
 
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
-      <span></span><span></span><span></span>
-    </button>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav-panel" id="mobile-nav">
+    <ul>
+      <li><a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="projet.html" data-i18n="nav.project">Le Projet</a></li>
+      <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
+      <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
+      <li><a href="rejoindre.html" data-i18n="nav.join">Rejoindre</a></li>
+    </ul>
   </div>
 </header>
 
-<main>
+<main id="main">
 
-  <!-- HERO -->
-  <section id="accueil" class="hero">
-    <canvas id="synapse-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+  <!-- HERO — vidéo en arrière-plan -->
+  <section class="hero">
+    <div class="hero-media" id="hero-media">
+      <!-- Repli visuel tant que la vidéo n'est pas chargée : animation SVG d'exosquelette -->
+      <div class="hero-fallback" id="hero-exo-mount" aria-hidden="true"></div>
+
+      <!--
+        Emplacement de la vraie vidéo d'atelier (étudiants au travail sur l'exosquelette),
+        façon Baja ÉTS. Déposer le fichier ici : assets/hero-video.mp4
+        (autoplay + muted + loop + playsinline, sans contrôles). Tant que le
+        fichier n'existe pas, cette balise échoue silencieusement et
+        l'animation SVG ci-dessus reste visible en arrière-plan.
+      -->
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.svg">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-overlay"></div>
+    </div>
+
     <div class="container hero-inner">
-      <p class="eyebrow" data-reveal>Club étudiant biomédical — ÉTS Montréal</p>
-      <h1 data-reveal>Rendre la mobilité <span class="accent">accessible à tous.</span></h1>
-      <p class="hero-lead" data-reveal>
+      <p class="eyebrow" data-reveal data-i18n="home.hero.eyebrow">Club étudiant biomédical — ÉTS Montréal</p>
+      <h1 data-reveal data-i18n="home.hero.title">Rendre la mobilité <span class="accent">accessible à tous.</span></h1>
+      <p class="hero-lead" data-reveal data-i18n="home.hero.lead">
         SynapsÉTS cherche à fournir une solution pour améliorer la qualité de vie des personnes
         ayant des difficultés de mobilité. Notre objectif à long terme est de créer un exosquelette
-        qui renforce la mobilité et l'indépendance des individus confrontés à ces défis. Pour ce faire,
-        nous visons à concevoir et fabriquer un exosquelette offrant un soutien et une assistance à la
-        marche, à la station debout, à l'assise, à la montée des escaliers et à la navigation sur un
-        terrain accidenté.
+        qui renforce la mobilité et l'indépendance des individus confrontés à ces défis.
       </p>
       <div class="hero-actions" data-reveal>
-        <a href="#rejoindre" class="btn btn-primary">Rejoindre le club</a>
-        <a href="#partenaires" class="btn btn-outline">Devenir partenaire</a>
+        <a href="rejoindre.html" class="btn btn-primary" data-i18n="home.hero.cta1">Rejoindre le club</a>
+        <a href="partenaires.html" class="btn btn-outline-light" data-i18n="home.hero.cta2">Devenir partenaire</a>
       </div>
     </div>
-    <a href="#projet" class="scroll-cue" aria-label="Découvrir le projet">
+    <a href="#reperes" class="scroll-cue" aria-label="Découvrir SynapsÉTS">
       <span></span>
     </a>
   </section>
 
-  <!-- LE PROJET -->
-  <section id="projet" class="section">
+  <!-- REPÈRES -->
+  <section class="stats-strip section-sm" id="reperes">
     <div class="container">
-      <p class="section-tag" data-reveal>Le Projet</p>
-      <h2 data-reveal>Un exosquelette conçu par et pour l'ÉTS</h2>
-      <p class="section-lead" data-reveal>
-        SynapsÉTS est le <strong>seul club étudiant biomédical</strong> de l'École de technologie
-        supérieure. Depuis sa création, l'équipe travaille en développement actif sur un exosquelette
-        d'assistance à la marche, avec un cycle d'amélioration continue à chaque session : structure,
-        électronique, capteurs et contrôle sont révisés en parallèle pour se rapprocher d'un dispositif
-        fiable et confortable.
-      </p>
-
-      <div class="project-grid">
-        <div class="project-card" data-reveal>
-          <div class="icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Unique à l'ÉTS</h3>
-          <p>Premier et seul club biomédical de l'école : une équipe multidisciplinaire qui combine génie mécanique, électrique, logiciel et biomédical.</p>
+      <div class="stats-grid">
+        <div class="stat-card" data-reveal>
+          <h3 data-i18n="home.stat1.title">Seul club biomédical</h3>
+          <p data-i18n="home.stat1.text">Le premier et unique club étudiant biomédical de l'ÉTS.</p>
         </div>
-
-        <div class="project-card" data-reveal>
-          <div class="icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="12" cy="12" r="9"/>
-              <path d="M12 7v5l3 3" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Développement actif</h3>
-          <p>Prototypage, tests et itérations continus. Le projet évolue à chaque session avec de nouveaux jalons techniques.</p>
+        <div class="stat-card" data-reveal>
+          <h3 data-i18n="home.stat2.title">Développement actif</h3>
+          <p data-i18n="home.stat2.text">Prototypage et itérations continues, session après session.</p>
         </div>
-
-        <div class="project-card" data-reveal>
-          <div class="icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M6 21V10a2 2 0 0 1 2-2h1M18 21V10a2 2 0 0 0-2-2h-1M9 8V6a3 3 0 0 1 6 0v2M6 21h12" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>Module de cheville</h3>
-          <p>L'équipe travaille actuellement sur l'implémentation de la cheville, une étape clé pour un mouvement naturel et une meilleure absorption d'impact.</p>
-        </div>
-
-        <div class="project-card" data-reveal>
-          <div class="icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M4 20l6-16 4 10 3-6 3 12" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>Objectifs de compétition</h3>
-          <p>À terme, le club vise à représenter l'ÉTS dans des compétitions internationales comme le <strong>Cybathlon</strong> et les <strong>ASTM International Exo Games</strong>.</p>
+        <div class="stat-card" data-reveal>
+          <h3 data-i18n="home.stat3.title">Cap sur la compétition</h3>
+          <p data-i18n="home.stat3.text">Objectif : Cybathlon et ASTM International Exo Games.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EQUIPE -->
-  <section id="equipe" class="section alt-bg">
+  <!-- EXPLORER -->
+  <section class="section">
     <div class="container">
-      <p class="section-tag" data-reveal>L'Équipe</p>
-      <h2 data-reveal>Les personnes derrière le projet</h2>
-      <p class="section-lead" data-reveal>
-        Une équipe étudiante multidisciplinaire. Les profils ci-dessous sont des espaces réservés —
-        ils seront remplacés par les vrais membres, rôles et photos.
-      </p>
+      <p class="section-tag" data-reveal data-i18n="home.explore.tag">Explorer</p>
+      <h2 data-reveal data-i18n="home.explore.title">Découvrir SynapsÉTS</h2>
 
-      <div class="team-grid" id="team-grid"><!-- généré par js/script.js --></div>
-    </div>
-  </section>
-
-  <!-- PARTENAIRES -->
-  <section id="partenaires" class="section partners">
-    <div class="container">
-      <p class="section-tag" data-reveal>Devenez Partenaire</p>
-      <h2 data-reveal>Aidez-nous à faire avancer la mobilité</h2>
-      <p class="section-lead" data-reveal>
-        Construire un exosquelette demande du matériel spécialisé : profilés et pièces d'<strong>aluminium</strong>,
-        <strong>composants électroniques</strong> (moteurs, contrôleurs, batteries) et <strong>capteurs</strong>
-        de précision (force, position, IMU). Votre contribution finance directement la fabrication et les tests
-        de nos prototypes.
-      </p>
-
-      <div class="tiers-grid">
-        <div class="tier-card" data-reveal>
-          <div class="tier-badge tier-bronze">Bronze</div>
-          <p class="tier-desc">Visibilité de base et remerciements sur nos canaux — palier d'entrée idéal pour soutenir le projet.</p>
-          <ul class="tier-perks">
-            <li>Logo sur le site web</li>
-            <li>Mention sur les réseaux sociaux</li>
-            <li>Remerciement en fin de saison</li>
-          </ul>
-        </div>
-
-        <div class="tier-card tier-featured" data-reveal>
-          <div class="tier-badge tier-argent">Argent</div>
-          <p class="tier-desc">Une visibilité renforcée et une présence sur le prototype lors des démonstrations publiques.</p>
-          <ul class="tier-perks">
-            <li>Tous les avantages Bronze</li>
-            <li>Logo sur le prototype / kiosque</li>
-            <li>Invitation aux présentations du club</li>
-          </ul>
-        </div>
-
-        <div class="tier-card" data-reveal>
-          <div class="tier-badge tier-or">Or</div>
-          <p class="tier-desc">Un partenariat stratégique avec visibilité maximale et accès privilégié à l'équipe.</p>
-          <ul class="tier-perks">
-            <li>Tous les avantages Argent</li>
-            <li>Logo principal sur l'exosquelette</li>
-            <li>Rencontre dédiée avec l'équipe technique</li>
-          </ul>
-        </div>
-      </div>
-      <p class="tiers-note">Détails complets des paliers et contreparties disponibles sur demande.</p>
-
-      <div class="center-cta" data-reveal>
-        <a href="mailto:info@synapsets.ca?subject=Partenariat%20SynapsETS" class="btn btn-primary">Nous contacter</a>
+      <div class="explore-grid">
+        <a href="projet.html" class="explore-card" data-reveal>
+          <h3 data-i18n="home.card.project.title">Le Projet</h3>
+          <p data-i18n="home.card.project.text">L'exosquelette, ses objectifs techniques et sa feuille de route.</p>
+          <span class="explore-link" data-i18n="home.card.project.link">En savoir plus</span>
+        </a>
+        <a href="equipe.html" class="explore-card" data-reveal>
+          <h3 data-i18n="home.card.team.title">L'Équipe</h3>
+          <p data-i18n="home.card.team.text">Les étudiant·e·s multidisciplinaires derrière le projet.</p>
+          <span class="explore-link" data-i18n="home.card.team.link">Voir l'équipe</span>
+        </a>
+        <a href="partenaires.html" class="explore-card" data-reveal>
+          <h3 data-i18n="home.card.partners.title">Partenaires</h3>
+          <p data-i18n="home.card.partners.text">Paliers de commandite et matériel à financer.</p>
+          <span class="explore-link" data-i18n="home.card.partners.link">Devenir partenaire</span>
+        </a>
+        <a href="rejoindre.html" class="explore-card" data-reveal>
+          <h3 data-i18n="home.card.join.title">Rejoindre</h3>
+          <p data-i18n="home.card.join.text">Aucune expérience requise, seulement de la motivation.</p>
+          <span class="explore-link" data-i18n="home.card.join.link">Rejoindre le club</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- REJOINDRE -->
-  <section id="rejoindre" class="section join-cta">
-    <div class="container join-inner">
-      <div class="join-text" data-reveal>
-        <p class="section-tag section-tag-light">Rejoindre le Club</p>
-        <h2>Envie de contribuer à un projet qui change des vies ?</h2>
-        <p class="section-lead section-lead-light">
-          Que tu sois en génie mécanique, électrique, logiciel, biomédical ou dans un domaine connexe,
-          il y a une place pour toi dans l'équipe. Aucune expérience préalable n'est requise — seulement
-          de la curiosité et de la motivation.
-        </p>
-        <a href="#contact" class="btn btn-outline-light">Nous écrire pour te joindre à nous</a>
-      </div>
-
-      <div class="qr-placeholder" data-reveal>
-        <div class="qr-box" aria-hidden="true">
-          <svg viewBox="0 0 100 100" width="120" height="120">
-            <rect width="100" height="100" fill="none"/>
-            <g fill="#ffffff">
-              <rect x="6" y="6" width="24" height="24"/>
-              <rect x="70" y="6" width="24" height="24"/>
-              <rect x="6" y="70" width="24" height="24"/>
-              <rect x="14" y="14" width="8" height="8" fill="#0A1F44"/>
-              <rect x="78" y="14" width="8" height="8" fill="#0A1F44"/>
-              <rect x="14" y="78" width="8" height="8" fill="#0A1F44"/>
-              <rect x="40" y="6" width="6" height="6"/>
-              <rect x="54" y="6" width="6" height="6"/>
-              <rect x="40" y="40" width="6" height="6"/>
-              <rect x="54" y="40" width="6" height="6"/>
-              <rect x="70" y="40" width="6" height="6"/>
-              <rect x="84" y="40" width="6" height="6"/>
-              <rect x="40" y="54" width="6" height="6"/>
-              <rect x="6" y="40" width="6" height="6"/>
-              <rect x="40" y="84" width="6" height="6"/>
-              <rect x="54" y="70" width="6" height="6"/>
-              <rect x="70" y="84" width="6" height="6"/>
-              <rect x="84" y="70" width="6" height="6"/>
-            </g>
-          </svg>
-        </div>
-        <p class="qr-caption">QR code / lien d'adhésion à venir</p>
+  <!-- CTA FINAL -->
+  <section class="section cta-banner">
+    <div class="container cta-banner-inner">
+      <h2 data-reveal data-i18n="home.cta.title">Prêt·e à contribuer à un projet qui change des vies ?</h2>
+      <p data-reveal data-i18n="home.cta.text">Que tu sois en génie mécanique, électrique, logiciel ou biomédical, il y a une place pour toi dans l'équipe.</p>
+      <div class="cta-banner-actions" data-reveal>
+        <a href="rejoindre.html" class="btn btn-primary" data-i18n="home.cta.button">Rejoindre le club</a>
       </div>
     </div>
   </section>
@@ -245,12 +163,22 @@
 <footer class="site-footer" id="contact">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <span class="brand-name footer-brand-name">Synaps<span class="accent">É</span>TS</span>
-      <p>Club étudiant biomédical — École de technologie supérieure, Montréal.</p>
+      <span class="footer-brand-name">Synaps<span class="accent">É</span>TS</span>
+      <p data-i18n="footer.tagline">Club étudiant biomédical — École de technologie supérieure, Montréal.</p>
     </div>
 
     <div class="footer-links">
-      <h3>Suivez-nous</h3>
+      <h3 data-i18n="footer.quicklinksTitle">Liens rapides</h3>
+      <ul class="footer-quicklinks">
+        <li><a href="projet.html" data-i18n="nav.project">Le Projet</a></li>
+        <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
+        <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
+        <li><a href="rejoindre.html" data-i18n="nav.join">Rejoindre</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3 data-i18n="footer.followTitle">Nous joindre</h3>
       <ul class="social-list">
         <li>
           <a href="#" aria-label="Instagram de SynapsÉTS (à venir)">
@@ -275,10 +203,15 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; <span id="year"></span> SynapsÉTS — Tous droits réservés.</p>
+    <p>&copy; <span id="year"></span> SynapsÉTS — <span data-i18n="footer.rights">Tous droits réservés.</span></p>
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/exo-animation.js"></script>
+<script src="js/main.js"></script>
+<script>
+  if (window.SynapsETSExo) window.SynapsETSExo.mount("hero-exo-mount", { highlightAnkle: false });
+</script>
 </body>
 </html>
