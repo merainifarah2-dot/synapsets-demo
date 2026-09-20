@@ -59,14 +59,20 @@
 
   <section class="page-hero">
     <div class="container page-hero-inner">
-      <p class="page-hero-tag page-hero-tag-light" data-reveal data-i18n="project.hero.tag">Le Projet</p>
-      <h1 class="page-hero-title" data-reveal data-i18n="project.hero.title">Un exosquelette conçu par et pour l'ÉTS</h1>
+      <h1 class="page-hero-title page-hero-title-xl" data-reveal data-i18n="project.hero.title">L'Exosquelette</h1>
       <p class="page-hero-lead" data-reveal data-i18n="project.hero.lead">
-        SynapsÉTS est le seul club étudiant biomédical de l'École de technologie supérieure. En
-        développement actif, l'équipe améliore son exosquelette d'assistance à la marche à chaque session.
+        Un exosquelette de marche conçu, fabriqué et amélioré par les étudiant·e·s de l'ÉTS, session
+        après session.
       </p>
     </div>
   </section>
+
+  <!-- Barre de progression de scroll : apparaît une fois le hero dépassé,
+       se remplit selon la position dans #roadmap, disparaît après la
+       dernière étape. Voir js/roadmap-progress.js. -->
+  <div class="roadmap-progress" id="roadmap-progress" aria-hidden="true">
+    <div class="roadmap-progress-fill" id="roadmap-progress-fill"></div>
+  </div>
 
   <section class="section">
     <div class="container">
@@ -124,37 +130,42 @@
     </div>
   </section>
 
-  <section class="section alt-bg">
+  <section class="section alt-bg" id="roadmap">
     <div class="container">
       <p class="section-tag" data-reveal data-i18n="project.timeline.tag">Feuille de route</p>
       <h2 data-reveal data-i18n="project.timeline.title">Les grandes étapes du projet</h2>
 
-      <div class="timeline">
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot">1</div>
-          <h3 data-i18n="project.step1.title">Conception structurelle</h3>
-          <p data-i18n="project.step1.text">Définition de l'architecture mécanique et des matériaux (aluminium, impressions 3D).</p>
+      <div class="roadmap-steps">
+        <div class="roadmap-step" data-reveal>
+          <div class="roadmap-step-number">01</div>
+          <div class="roadmap-step-body">
+            <h3 data-i18n="project.step1.title">Conception & premier prototype</h3>
+            <p data-i18n="project.step1.text">Définition de l'architecture mécanique et des matériaux (aluminium, impressions 3D), puis assemblage d'un premier exosquelette fonctionnel pour valider le concept.</p>
+          </div>
         </div>
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot">2</div>
-          <h3 data-i18n="project.step2.title">Premier prototype</h3>
-          <p data-i18n="project.step2.text">Assemblage d'un premier exosquelette fonctionnel pour valider le concept.</p>
+
+        <div class="roadmap-step is-current" data-reveal>
+          <div class="roadmap-step-number">02</div>
+          <div class="roadmap-step-body">
+            <h3><span data-i18n="project.step2.title">Implémentation de la cheville</span> <span class="timeline-tag-current" data-i18n="project.step2.badge">En cours</span></h3>
+            <p data-i18n="project.step2.text">Intégration d'un module de cheville actif pour un mouvement plus naturel et une meilleure absorption d'impact.</p>
+          </div>
         </div>
-        <div class="timeline-item is-current" data-reveal>
-          <div class="timeline-dot">3</div>
-          <h3 style="display:inline" data-i18n="project.step3.title">Implémentation de la cheville</h3>
-          <span class="timeline-tag-current">En cours</span>
-          <p data-i18n="project.step3.text">Intégration d'un module de cheville actif pour un mouvement plus naturel.</p>
+
+        <div class="roadmap-step" data-reveal>
+          <div class="roadmap-step-number">03</div>
+          <div class="roadmap-step-body">
+            <h3 data-i18n="project.step3.title">Tests sur terrain accidenté</h3>
+            <p data-i18n="project.step3.text">Validation de la stabilité et de l'assistance à la marche hors laboratoire.</p>
+          </div>
         </div>
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot">4</div>
-          <h3 data-i18n="project.step4.title">Tests sur terrain accidenté</h3>
-          <p data-i18n="project.step4.text">Validation de la stabilité et de l'assistance à la marche hors laboratoire.</p>
-        </div>
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot">5</div>
-          <h3 data-i18n="project.step5.title">Compétitions internationales</h3>
-          <p data-i18n="project.step5.text">Préparation en vue du Cybathlon et des ASTM International Exo Games.</p>
+
+        <div class="roadmap-step" data-reveal>
+          <div class="roadmap-step-number">04</div>
+          <div class="roadmap-step-body">
+            <h3 data-i18n="project.step4.title">Compétitions internationales</h3>
+            <p data-i18n="project.step4.text">Préparation en vue du Cybathlon et des ASTM International Exo Games.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -167,6 +178,7 @@
       <div class="cta-banner-actions" data-reveal>
         <a href="equipe.html" class="btn btn-primary" data-i18n="project.cta.button1">Voir l'équipe</a>
         <a href="partenaires.html" class="btn btn-outline-light" data-i18n="project.cta.button2">Devenir partenaire</a>
+        <a href="rejoindre.html" class="btn btn-outline-light" data-i18n="project.cta.button3">Comment nous rejoindre</a>
       </div>
     </div>
   </section>
@@ -222,5 +234,6 @@
 
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
+<script src="js/roadmap-progress.js"></script>
 </body>
 </html>

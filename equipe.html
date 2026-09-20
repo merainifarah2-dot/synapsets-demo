@@ -57,20 +57,34 @@
 
 <main id="main">
 
-  <section class="page-hero">
-    <div class="container page-hero-inner">
-      <p class="page-hero-tag page-hero-tag-light" data-reveal data-i18n="team.hero.tag">L'Équipe</p>
-      <h1 class="page-hero-title" data-reveal data-i18n="team.hero.title">Les personnes derrière le projet</h1>
-      <p class="page-hero-lead" data-reveal data-i18n="team.hero.lead">
-        Une équipe étudiante multidisciplinaire, organisée par département. Clique sur une carte pour
-        voir le profil complet.
-      </p>
+  <section class="team-page-hero">
+    <div class="container">
+      <p class="section-tag" data-reveal data-i18n="team.hero.tag">L'Équipe</p>
+      <h1 class="team-hero-title" data-reveal data-i18n="team.hero.title">Rencontre l'équipe</h1>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div id="team-departments"><!-- généré par js/team.js à partir du tableau de membres --></div>
+      <div class="team-stage" id="team-stage">
+        <div id="team-departments"><!-- généré par js/team.js à partir du tableau de membres --></div>
+        <svg class="dept-connector-svg" id="dept-connector-svg" aria-hidden="true"></svg>
+        <div class="team-backdrop" id="team-backdrop" tabindex="-1"></div>
+
+        <aside class="member-panel" id="member-panel" aria-hidden="true">
+          <button type="button" class="modal-close member-panel-close" id="member-panel-close" aria-label="Fermer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+          </button>
+          <div class="member-panel-content" id="member-panel-content">
+            <div class="member-panel-photo" id="member-panel-photo"></div>
+            <h3 class="member-panel-name" id="member-panel-name"></h3>
+            <p class="member-panel-program" id="member-panel-program"></p>
+            <p class="member-panel-role-label" id="member-panel-role-label">Rôle</p>
+            <p class="member-panel-role-text" id="member-panel-role-text"></p>
+            <a href="#" target="_blank" rel="noopener" class="btn btn-primary member-panel-linkedin" id="member-panel-linkedin">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
 

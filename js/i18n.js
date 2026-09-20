@@ -4,6 +4,11 @@
    pointé utilisé dans les attributs data-i18n="section.cle" du HTML.
    Pour corriger ou ajouter une traduction : modifier l'objet TRANSLATIONS
    ci-dessous (fr et en ont exactement les mêmes clés).
+
+   Note : les libellés de l'interaction de la page Équipe (labels du panneau,
+   texte "rôle" ludique par membre) vivent dans js/team.js, à côté des
+   données des membres, plutôt qu'ici — voir le commentaire en tête de ce
+   fichier pour l'explication du choix.
    ========================================================================= */
 
 (function () {
@@ -28,30 +33,23 @@
           cta1: "Rejoindre le club",
           cta2: "Devenir partenaire"
         },
-        stat1: { title: "Seul club biomédical", text: "Le premier et unique club étudiant biomédical de l'ÉTS." },
-        stat2: { title: "Développement actif", text: "Prototypage et itérations continues, session après session." },
-        stat3: { title: "Cap sur la compétition", text: "Objectif : Cybathlon et ASTM International Exo Games." },
-        explore: {
-          tag: "Explorer",
-          title: "Découvrir SynapsÉTS"
+        who: {
+          tag: "Qui nous sommes",
+          title: "Un club, une mission claire",
+          text: "SynapsÉTS est le seul club étudiant biomédical de l'ÉTS. Notre équipe multidisciplinaire conçoit et fabrique un exosquelette de marche, en développement actif à chaque session, avec l'ambition de le mener un jour en compétition internationale.",
+          button: "En savoir plus sur le projet"
         },
-        card: {
-          project: { title: "Le Projet", text: "L'exosquelette, ses objectifs techniques et sa feuille de route.", link: "En savoir plus" },
-          team: { title: "L'Équipe", text: "Les étudiant·e·s multidisciplinaires derrière le projet.", link: "Voir l'équipe" },
-          partners: { title: "Partenaires", text: "Paliers de commandite et matériel à financer.", link: "Devenir partenaire" },
-          join: { title: "Rejoindre", text: "Aucune expérience requise, seulement de la motivation.", link: "Rejoindre le club" }
-        },
-        cta: {
-          title: "Prêt·e à contribuer à un projet qui change des vies ?",
-          text: "Que tu sois en génie mécanique, électrique, logiciel ou biomédical, il y a une place pour toi dans l'équipe.",
+        join: {
+          tag: "Rejoins-nous",
+          title: "Viens contribuer à un projet qui change des vies",
+          text: "Aucune expérience préalable requise — seulement de la curiosité et de la motivation. Découvre comment t'impliquer, nous suivre ou venir nous rencontrer.",
           button: "Rejoindre le club"
         }
       },
       project: {
         hero: {
-          tag: "Le Projet",
-          title: "Un exosquelette conçu par et pour l'ÉTS",
-          lead: "SynapsÉTS est le seul club étudiant biomédical de l'École de technologie supérieure. En développement actif, l'équipe améliore son exosquelette d'assistance à la marche à chaque session."
+          title: "L'Exosquelette",
+          lead: "Un exosquelette de marche conçu, fabriqué et amélioré par les étudiant·e·s de l'ÉTS, session après session."
         },
         intro: {
           tag: "Vue d'ensemble",
@@ -66,26 +64,24 @@
           tag: "Feuille de route",
           title: "Les grandes étapes du projet"
         },
-        step1: { title: "Conception structurelle", text: "Définition de l'architecture mécanique et des matériaux (aluminium, impressions 3D)." },
-        step2: { title: "Premier prototype", text: "Assemblage d'un premier exosquelette fonctionnel pour valider le concept." },
-        step3: { title: "Implémentation de la cheville", text: "Intégration d'un module de cheville actif pour un mouvement plus naturel." },
-        step4: { title: "Tests sur terrain accidenté", text: "Validation de la stabilité et de l'assistance à la marche hors laboratoire." },
-        step5: { title: "Compétitions internationales", text: "Préparation en vue du Cybathlon et des ASTM International Exo Games." },
+        step1: { title: "Conception & premier prototype", text: "Définition de l'architecture mécanique et des matériaux (aluminium, impressions 3D), puis assemblage d'un premier exosquelette fonctionnel pour valider le concept." },
+        step2: { title: "Implémentation de la cheville", badge: "En cours", text: "Intégration d'un module de cheville actif pour un mouvement plus naturel et une meilleure absorption d'impact." },
+        step3: { title: "Tests sur terrain accidenté", text: "Validation de la stabilité et de l'assistance à la marche hors laboratoire." },
+        step4: { title: "Compétitions internationales", text: "Préparation en vue du Cybathlon et des ASTM International Exo Games." },
         cta: {
           title: "Envie de travailler sur l'exosquelette ?",
-          text: "Découvre l'équipe derrière le projet ou deviens partenaire pour financer les prochaines étapes.",
+          text: "Découvre l'équipe derrière le projet, deviens partenaire, ou rejoins directement le club.",
           button1: "Voir l'équipe",
-          button2: "Devenir partenaire"
+          button2: "Devenir partenaire",
+          button3: "Comment nous rejoindre"
         }
       },
       team: {
         hero: {
           tag: "L'Équipe",
-          title: "Les personnes derrière le projet",
-          lead: "Une équipe étudiante multidisciplinaire, organisée par département. Clique sur une carte pour voir le profil complet."
+          title: "Rencontre l'équipe"
         },
         dept: { exec: "Exécutif / Direction", mec: "Mécanique", ele: "Électrique", log: "Logiciel", com: "Communications" },
-        modal: { department: "Département", program: "Programme d'études", linkedin: "Voir le profil LinkedIn", close: "Fermer" },
         cta: {
           title: "Rejoins une équipe passionnée",
           text: "Chaque département accueille de nouveaux membres à chaque session.",
@@ -98,10 +94,10 @@
           title: "Aidez-nous à faire avancer la mobilité",
           lead: "Votre contribution finance directement la fabrication et les tests de nos prototypes."
         },
+        download: { title: "Télécharger notre plan de partenariat", hint: "Document PDF — détails des paliers et contreparties" },
         intro: {
           text: "Construire un exosquelette demande du matériel spécialisé : profilés et pièces d'<strong>aluminium</strong>, <strong>composants électroniques</strong> (moteurs, contrôleurs, batteries) et <strong>capteurs</strong> de précision (force, position, IMU)."
         },
-        download: { title: "Télécharger notre plan de partenariat", hint: "Document PDF — détails des paliers et contreparties" },
         tiers: { tag: "Paliers de commandite", title: "Trois façons de nous soutenir" },
         tierBronze: {
           desc: "Visibilité de base et remerciements sur nos canaux — palier d'entrée idéal pour soutenir le projet.",
@@ -116,25 +112,45 @@
           perk1: "Tous les avantages Argent", perk2: "Logo principal sur l'exosquelette", perk3: "Rencontre dédiée avec l'équipe technique"
         },
         tiersNote: "Détails complets des paliers et contreparties disponibles dans le plan de partenariat.",
-        ctaButton: "Nous contacter"
+        ctaButton: "Nous contacter",
+        nonStructured: {
+          tag: "Autre façon d'aider",
+          title: "Pas de partenariat structuré ? Vous pouvez quand même nous aider",
+          text: "Un service, un rabais, des matériaux ou des composants, ou simplement un don sans attente de contrepartie : toute forme de soutien est bienvenue, même hors des paliers officiels.",
+          button: "Nous proposer votre aide"
+        },
+        currentSponsors: {
+          tag: "Nos sponsors",
+          title: "Nos sponsors actuels",
+          emptyText: "Nos premiers partenaires seront affichés ici. Soyez parmi les premiers à soutenir SynapsÉTS !"
+        }
       },
       join: {
         hero: {
-          tag: "Rejoindre le Club",
-          title: "Envie de contribuer à un projet qui change des vies ?",
-          lead: "Que tu sois en génie mécanique, électrique, logiciel, biomédical ou dans un domaine connexe, il y a une place pour toi dans l'équipe. Aucune expérience préalable n'est requise — seulement de la curiosité et de la motivation."
+          title: "Rejoins SynapsÉTS",
+          lead: "Que tu veuilles t'impliquer activement, simplement suivre nos avancées, ou venir nous voir en personne : il y a une façon de rejoindre l'aventure qui te convient."
         },
-        steps: { tag: "Comment nous rejoindre", title: "Trois étapes simples" },
-        step1: { title: "Remplis le formulaire", text: "Partage-nous ton programme d'études et tes champs d'intérêt." },
-        step2: { title: "Rencontre l'équipe", text: "Discute avec les responsables de département lors d'un café-rencontre." },
-        step3: { title: "Choisis ton département", text: "Mécanique, électrique, logiciel ou communications : trouve ta place." },
-        finalCta: {
+        paths: { tag: "Comment nous rejoindre", title: "Trouve ta prochaine étape" },
+        path1: {
+          title: "Devenir membre actif",
+          text: "Que tu sois en génie mécanique, électrique, logiciel, biomédical ou dans un domaine connexe, il y a une place pour toi dans l'équipe. Aucune expérience préalable n'est requise — seulement de la curiosité et de la motivation. Écris-nous pour qu'on planifie ta rencontre avec l'équipe."
+        },
+        path2: {
+          title: "Nous suivre",
+          text: "Pas prêt·e à t'engager tout de suite ? Suis nos avancées, nos compétitions et nos coulisses sur nos réseaux.",
+          instagram: "Instagram",
+          linkedin: "LinkedIn"
+        },
+        path3: {
+          title: "Nous visiter",
+          text: "Le club t'ouvre ses portes au local D2020 de l'ÉTS — viens voir l'exosquelette de près, discuter avec l'équipe et poser toutes tes questions, sans rendez-vous nécessaire."
+        },
+        mailBanner: {
           tag: "Dernière étape",
           title: "Prêt·e à embarquer avec nous ?",
-          text: "Écris-nous dès maintenant : un·e membre de l'exécutif te répondra pour planifier ta rencontre avec l'équipe."
-        },
-        qrCaption: "QR code / lien d'adhésion à venir",
-        ctaButton: "Nous écrire pour te joindre à nous"
+          text: "Écris-nous dès maintenant : un·e membre de l'exécutif te répondra pour planifier ta rencontre avec l'équipe.",
+          button: "Nous écrire"
+        }
       }
     },
 
@@ -154,30 +170,23 @@
           cta1: "Join the club",
           cta2: "Become a partner"
         },
-        stat1: { title: "Only biomedical club", text: "The first and only biomedical student club at ÉTS." },
-        stat2: { title: "Active development", text: "Continuous prototyping and iteration, semester after semester." },
-        stat3: { title: "Aiming for competition", text: "Goal: Cybathlon and the ASTM International Exo Games." },
-        explore: {
-          tag: "Explore",
-          title: "Discover SynapsÉTS"
+        who: {
+          tag: "Who we are",
+          title: "One club, one clear mission",
+          text: "SynapsÉTS is the only biomedical student club at ÉTS. Our multidisciplinary team designs and builds a walking exoskeleton, in active development every semester, with the ambition to one day take it to international competition.",
+          button: "Learn more about the project"
         },
-        card: {
-          project: { title: "The Project", text: "The exoskeleton, its technical goals, and its roadmap.", link: "Learn more" },
-          team: { title: "Our Team", text: "The multidisciplinary students behind the project.", link: "Meet the team" },
-          partners: { title: "Partners", text: "Sponsorship tiers and the equipment we need to fund.", link: "Become a partner" },
-          join: { title: "Join Us", text: "No experience required, just motivation.", link: "Join the club" }
-        },
-        cta: {
-          title: "Ready to contribute to a project that changes lives?",
-          text: "Whether you're in mechanical, electrical, software, or biomedical engineering, there's a place for you on the team.",
+        join: {
+          tag: "Join us",
+          title: "Come contribute to a project that changes lives",
+          text: "No prior experience required — just curiosity and motivation. Find out how to get involved, follow us, or come meet us in person.",
           button: "Join the club"
         }
       },
       project: {
         hero: {
-          tag: "The Project",
-          title: "An exoskeleton built by and for ÉTS",
-          lead: "SynapsÉTS is the only biomedical student club at École de technologie supérieure. In active development, the team improves its walking-assistance exoskeleton every semester."
+          title: "The Exoskeleton",
+          lead: "A walking exoskeleton designed, built, and improved by ÉTS students, semester after semester."
         },
         intro: {
           tag: "Overview",
@@ -192,26 +201,24 @@
           tag: "Roadmap",
           title: "Key milestones of the project"
         },
-        step1: { title: "Structural design", text: "Defining the mechanical architecture and materials (aluminum, 3D printing)." },
-        step2: { title: "First prototype", text: "Assembling a first functional exoskeleton to validate the concept." },
-        step3: { title: "Ankle implementation", text: "Integrating an active ankle module for more natural movement." },
-        step4: { title: "Uneven-terrain testing", text: "Validating stability and walking assistance outside the lab." },
-        step5: { title: "International competitions", text: "Preparing for the Cybathlon and the ASTM International Exo Games." },
+        step1: { title: "Design & first prototype", text: "Defining the mechanical architecture and materials (aluminum, 3D printing), then assembling a first functional exoskeleton to validate the concept." },
+        step2: { title: "Ankle implementation", badge: "In progress", text: "Integrating an active ankle module for more natural movement and better impact absorption." },
+        step3: { title: "Uneven-terrain testing", text: "Validating stability and walking assistance outside the lab." },
+        step4: { title: "International competitions", text: "Preparing for the Cybathlon and the ASTM International Exo Games." },
         cta: {
           title: "Want to work on the exoskeleton?",
-          text: "Meet the team behind the project or become a partner to help fund the next steps.",
+          text: "Meet the team behind the project, become a partner, or join the club directly.",
           button1: "Meet the team",
-          button2: "Become a partner"
+          button2: "Become a partner",
+          button3: "How to join"
         }
       },
       team: {
         hero: {
           tag: "Our Team",
-          title: "The people behind the project",
-          lead: "A multidisciplinary student team, organized by department. Click a card to see the full profile."
+          title: "Meet the team"
         },
         dept: { exec: "Executive / Leadership", mec: "Mechanical", ele: "Electrical", log: "Software", com: "Communications" },
-        modal: { department: "Department", program: "Program of study", linkedin: "View LinkedIn profile", close: "Close" },
         cta: {
           title: "Join a passionate team",
           text: "Every department welcomes new members each semester.",
@@ -224,10 +231,10 @@
           title: "Help us advance mobility",
           lead: "Your contribution directly funds the manufacturing and testing of our prototypes."
         },
+        download: { title: "Download our partnership plan", hint: "PDF document — full tier details and benefits" },
         intro: {
           text: "Building an exoskeleton requires specialized material: <strong>aluminum</strong> profiles and parts, <strong>electronic components</strong> (motors, controllers, batteries), and precision <strong>sensors</strong> (force, position, IMU)."
         },
-        download: { title: "Download our partnership plan", hint: "PDF document — full tier details and benefits" },
         tiers: { tag: "Sponsorship tiers", title: "Three ways to support us" },
         tierBronze: {
           desc: "Basic visibility and recognition on our channels — an ideal entry tier to support the project.",
@@ -242,25 +249,45 @@
           perk1: "All Silver benefits", perk2: "Primary logo on the exoskeleton", perk3: "Dedicated meeting with the technical team"
         },
         tiersNote: "Full tier details and benefits are available in the partnership plan.",
-        ctaButton: "Contact us"
+        ctaButton: "Contact us",
+        nonStructured: {
+          tag: "Other ways to help",
+          title: "No structured partnership? You can still help",
+          text: "A service, a discount, materials or components, or simply a gift with no expectation of return: any form of support is welcome, even outside the official tiers.",
+          button: "Offer your help"
+        },
+        currentSponsors: {
+          tag: "Our sponsors",
+          title: "Our current sponsors",
+          emptyText: "Our first partners will be featured here. Be among the first to support SynapsÉTS!"
+        }
       },
       join: {
         hero: {
-          tag: "Join the Club",
-          title: "Want to contribute to a project that changes lives?",
-          lead: "Whether you're in mechanical, electrical, software, biomedical engineering, or a related field, there's a place for you on the team. No prior experience required — just curiosity and motivation."
+          title: "Join SynapsÉTS",
+          lead: "Whether you want to get actively involved, simply follow our progress, or come see us in person: there's a way to join the adventure that fits you."
         },
-        steps: { tag: "How to join", title: "Three simple steps" },
-        step1: { title: "Fill out the form", text: "Tell us about your program of study and areas of interest." },
-        step2: { title: "Meet the team", text: "Chat with department leads over a coffee meet-up." },
-        step3: { title: "Choose your department", text: "Mechanical, electrical, software, or communications: find your fit." },
-        finalCta: {
+        paths: { tag: "How to join", title: "Find your next step" },
+        path1: {
+          title: "Become an active member",
+          text: "Whether you're in mechanical, electrical, software, biomedical engineering, or a related field, there's a place for you on the team. No prior experience required — just curiosity and motivation. Write to us so we can plan your meet-up with the team."
+        },
+        path2: {
+          title: "Follow us",
+          text: "Not ready to commit just yet? Follow our progress, competitions, and behind-the-scenes on our channels.",
+          instagram: "Instagram",
+          linkedin: "LinkedIn"
+        },
+        path3: {
+          title: "Come visit",
+          text: "The club opens its doors at ÉTS room D2020 — come see the exoskeleton up close, chat with the team, and ask all your questions, no appointment needed."
+        },
+        mailBanner: {
           tag: "Last step",
           title: "Ready to come aboard?",
-          text: "Write to us now: a member of the executive team will get back to you to plan your meet-up with the team."
-        },
-        qrCaption: "Membership QR code / link coming soon",
-        ctaButton: "Write to us to join"
+          text: "Write to us now: a member of the executive team will get back to you to plan your meet-up with the team.",
+          button: "Write to us"
+        }
       }
     }
   };
