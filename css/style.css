@@ -182,18 +182,8 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 }
 
 .brand { display: flex; align-items: center; flex-shrink: 0; }
-.brand-logo-placeholder {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.55rem;
-  letter-spacing: 0.01em;
-  color: var(--navy);
-  text-transform: uppercase;
-  line-height: 1;
-}
-/* Pour intégrer le vrai logo plus tard : remplacer le <span class="brand-logo-placeholder">
-   dans le HTML par : <img src="assets/logo.svg" alt="SynapsÉTS" class="brand-logo"> */
-.brand-logo { height: 42px; width: auto; display: block; }
+/* Logo officiel (assets/logo.webp), ratio ~4.07:1 (mot-symbole + tagline). */
+.brand-logo { height: 40px; width: auto; display: block; }
 
 .header-right { display: flex; align-items: center; gap: 14px; }
 
@@ -288,7 +278,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   .nav-toggle, .mobile-nav-panel { display: none; }
   .main-nav { display: block; }
   .btn-nav { display: inline-flex; }
-  .brand-logo-placeholder { font-size: 1.75rem; }
+  .brand-logo { height: 48px; }
 }
 
 /* Très petits écrans (ex: 320px) : resserrer le header pour éviter tout
@@ -298,7 +288,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   .container { padding: 0 16px; }
   .header-right { gap: 8px; }
   .lang-btn { padding: 6px 8px; font-size: 0.68rem; }
-  .brand-logo-placeholder { font-size: 1.35rem; }
+  .brand-logo { height: 32px; }
   .btn { white-space: normal; text-align: center; }
 }
 
