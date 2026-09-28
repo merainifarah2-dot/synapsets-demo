@@ -181,26 +181,51 @@
           title: "Rejoins SynapsÉTS",
           lead: "Que tu veuilles t'impliquer activement, simplement suivre nos avancées, ou venir nous voir en personne : il y a une façon de rejoindre l'aventure qui te convient."
         },
-        paths: { tag: "Comment nous rejoindre", title: "Trouve ta prochaine étape" },
+        steps: {
+          tag: "Comment ça marche",
+          title: "De la curiosité à l'équipe",
+          step1: { title: "Viens nous voir ou écris-nous", text: "Passe au local D-2014 ou envoie-nous un courriel pour poser tes questions." },
+          step2: { title: "Fais ta demande d'adhésion", text: "L'adhésion se fait par le formulaire officiel des clubs étudiants de l'ÉTS." },
+          step3: { title: "Suis la formation de base", text: "La formation de base des nouveaux membres de la Régie des clubs étudiants est obligatoire pour l'accès aux locaux et aux bourses d'implication." },
+          step4: { title: "Rejoins ton équipe", text: "Tu es accueilli(e) dans l'équipe qui correspond à tes intérêts." },
+          link: "Voir la page du club sur le site de l'ÉTS"
+        },
+        focus: {
+          tag: "Nos équipes",
+          title: "Trouve ta place",
+          lead: "Toutes les disciplines sont les bienvenues. Voici où on peut avoir besoin de toi.",
+          mec: { title: "Mécanique", text: "Conception et amélioration de la structure de l'exosquelette." },
+          ele: { title: "Électrique", text: "Circuits imprimés, capteurs et électronique embarquée." },
+          log: { title: "Logiciel", text: "Programmation du contrôle de l'exosquelette, site web et documentation." },
+          com: { title: "Communication", text: "Réseaux sociaux, vidéo, événements et partenariats." }
+        },
+        paths: { tag: "Nous approcher", title: "Trois façons de nous approcher" },
         path1: {
           title: "Devenir membre actif",
-          text: "Que tu sois en génie mécanique, électrique, logiciel, biomédical ou dans un domaine connexe, il y a une place pour toi dans l'équipe. Aucune expérience préalable n'est requise — seulement de la curiosité et de la motivation. Écris-nous pour qu'on planifie ta rencontre avec l'équipe."
+          text: "Étudiant(e) en génie mécanique, électrique, logiciel, biomédical ou dans un domaine connexe : il y a peut-être une place pour toi dans l'équipe. Écris-nous pour en discuter.",
+          button: "Nous écrire"
         },
         path2: {
           title: "Nous suivre",
-          text: "Pas prêt·e à t'engager tout de suite ? Suis nos avancées, nos compétitions et nos coulisses sur nos réseaux.",
+          text: "Pas prêt(e) à t'engager tout de suite ? Suis nos avancées et nos coulisses.",
           instagram: "Instagram",
           linkedin: "LinkedIn"
         },
         path3: {
           title: "Nous visiter",
-          text: "Le club t'ouvre ses portes au local D2020 de l'ÉTS — viens voir l'exosquelette de près, discuter avec l'équipe et poser toutes tes questions, sans rendez-vous nécessaire."
+          text: "Le club t'ouvre ses portes au local D-2014 de l'ÉTS. Viens voir l'exosquelette de près et poser tes questions à l'équipe."
         },
-        mailBanner: {
-          tag: "Dernière étape",
-          title: "Prêt·e à embarquer avec nous ?",
-          text: "Écris-nous dès maintenant : un·e membre de l'exécutif te répondra pour planifier ta rencontre avec l'équipe.",
+        projectIdea: {
+          title: "Tu veux porter un projet ?",
+          text: "Une idée, ou l'envie de diriger un projet ? Écris-nous.",
           button: "Nous écrire"
+        },
+        finalCta: {
+          tag: "Dernière étape",
+          title: "Prêt(e) à te lancer&nbsp;?",
+          text: "Une question avant de commencer ? Écris-nous.",
+          button1: "Faire ma demande d'adhésion",
+          button2: "J'ai une question"
         }
       }
     },
@@ -369,26 +394,51 @@
           title: "Join SynapsÉTS",
           lead: "Whether you want to get actively involved, simply follow our progress, or come see us in person: there's a way to join the adventure that fits you."
         },
-        paths: { tag: "How to join", title: "Find your next step" },
+        steps: {
+          tag: "How it works",
+          title: "From curiosity to the team",
+          step1: { title: "Come see us or write to us", text: "Stop by room D-2014 or send us an email to ask your questions." },
+          step2: { title: "Apply for membership", text: "Membership goes through the ÉTS student clubs' official form." },
+          step3: { title: "Complete the basic training", text: "The Régie des clubs étudiants' basic training for new members is mandatory for room access and involvement grants." },
+          step4: { title: "Join your team", text: "You're welcomed into the team that matches your interests." },
+          link: "See the club's page on the ÉTS website"
+        },
+        focus: {
+          tag: "Our teams",
+          title: "Find your place",
+          lead: "Every discipline is welcome. Here's where we might need you.",
+          mec: { title: "Mechanical", text: "Design and improvement of the exoskeleton's structure." },
+          ele: { title: "Electrical", text: "Printed circuits, sensors, and embedded electronics." },
+          log: { title: "Software", text: "Programming the exoskeleton's control, website, and documentation." },
+          com: { title: "Communications", text: "Social media, video, events, and partnerships." }
+        },
+        paths: { tag: "Reach out", title: "Three ways to reach us" },
         path1: {
           title: "Become an active member",
-          text: "Whether you're in mechanical, electrical, software, biomedical engineering, or a related field, there's a place for you on the team. No prior experience required — just curiosity and motivation. Write to us so we can plan your meet-up with the team."
+          text: "Studying mechanical, electrical, software, biomedical engineering, or a related field: there might be a place for you on the team. Write to us to talk about it.",
+          button: "Write to us"
         },
         path2: {
           title: "Follow us",
-          text: "Not ready to commit just yet? Follow our progress, competitions, and behind-the-scenes on our channels.",
+          text: "Not ready to commit just yet? Follow our progress and behind-the-scenes.",
           instagram: "Instagram",
           linkedin: "LinkedIn"
         },
         path3: {
           title: "Come visit",
-          text: "The club opens its doors at ÉTS room D2020 — come see the exoskeleton up close, chat with the team, and ask all your questions, no appointment needed."
+          text: "The club opens its doors at ÉTS room D-2014. Come see the exoskeleton up close and ask the team your questions."
         },
-        mailBanner: {
-          tag: "Last step",
-          title: "Ready to come aboard?",
-          text: "Write to us now: a member of the executive team will get back to you to plan your meet-up with the team.",
+        projectIdea: {
+          title: "Want to lead a project?",
+          text: "Got an idea, or want to lead a project? Write to us.",
           button: "Write to us"
+        },
+        finalCta: {
+          tag: "Last step",
+          title: "Ready to get started&nbsp;?",
+          text: "Got a question before you begin? Write to us.",
+          button1: "Apply for membership",
+          button2: "I have a question"
         }
       }
     }

@@ -865,6 +865,42 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 .path-card-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 .btn-sm { padding: 9px 16px; font-size: 0.8rem; }
 
+/* ---------- Rejoindre : hero aligné sur la marge du conteneur ---------- */
+.join-hero-inner { margin-left: 0; }
+
+/* ---------- Rejoindre : parcours en 4 étapes ---------- */
+.step-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 28px 24px; }
+.step-number { font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; color: var(--red); opacity: 0.85; line-height: 1; margin: 0 0 16px; }
+.step-card h3 { font-family: var(--font-display); font-size: 1.02rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.01em; color: var(--navy); margin-bottom: 10px; }
+.step-card p { color: var(--gray-700); font-size: 0.93rem; line-height: 1.6; }
+
+.discreet-link { display: inline-flex; align-items: center; color: var(--gray-500); font-size: 0.9rem; text-decoration: underline; text-underline-offset: 3px; margin-top: 28px; transition: color 0.15s ease; }
+.discreet-link:hover { color: var(--navy); }
+.discreet-link:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 3px; }
+
+/* ---------- Rejoindre : encart "porter un projet" ---------- */
+.project-banner {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: clamp(26px, 4vw, 38px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.project-banner-text h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; }
+.project-banner-text p { color: var(--gray-700); font-size: 0.95rem; line-height: 1.6; max-width: 520px; }
+.project-banner .btn { flex-shrink: 0; }
+
+/* ---------- Rejoindre : appel final ---------- */
+.join-final-title { text-wrap: balance; }
+
+/* ---------- Focus visible générique (boutons + liens sociaux) ---------- */
+.btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.social-list a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 3px; }
+
 /* ---------- Footer (identique sur toutes les pages) ---------- */
 .site-footer { background: var(--navy); padding: 64px 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.12); }
