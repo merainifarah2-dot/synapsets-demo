@@ -317,10 +317,28 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
    Tant qu'aucun fichier assets/hero-video.mp4 n'est déposé, il reste
    invisible et laisse voir le dégradé sombre défini sur .hero-media. */
 .hero-media.video-ready .hero-video { opacity: 1; }
+/* Photo de fond du hero (assets/photos/ace-porte.jpg) avec lent zoom
+   d'entrée façon Ken Burns, jouée une seule fois. */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  animation: heroZoom 20s ease-out forwards;
+}
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7,22,48,0.55) 0%, rgba(7,22,48,0.72) 55%, rgba(7,22,48,0.92) 100%);
+  /* Assombri un peu plus qu'un simple dégradé sur fond uni : avec une vraie
+     photo (ciel clair, porte blanche) derrière, ce niveau garde un contraste
+     AA pour le texte blanc quelle que soit la zone de l'image sous le texte. */
+  background: linear-gradient(180deg, rgba(7,22,48,0.68) 0%, rgba(7,22,48,0.8) 55%, rgba(7,22,48,0.94) 100%);
 }
 .hero-inner {
   position: relative;
@@ -408,10 +426,45 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   z-index: 0;
 }
 
+/* ---------- Accueil : bande de faits (sous le hero) ---------- */
+.facts-strip { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+.facts-grid { display: grid; grid-template-columns: 1fr; }
+@media (min-width: 780px) { .facts-grid { grid-template-columns: repeat(3, 1fr); } }
+.fact-item {
+  padding: 30px 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-200);
+}
+.fact-item:last-child { border-bottom: none; }
+@media (min-width: 780px) {
+  .fact-item { border-bottom: none; border-right: 1px solid var(--gray-200); }
+  .fact-item:last-child { border-right: none; }
+}
+.fact-value { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 6px; }
+.fact-label { color: var(--gray-500); font-size: 0.88rem; max-width: 280px; margin: 0 auto; }
+
+/* ---------- Accueil : "Ce qu'on construit" (image + texte) ---------- */
+.build-split { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+@media (min-width: 860px) { .build-split { grid-template-columns: 1fr 1fr; gap: 56px; } }
+.build-image img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.build-list { margin-bottom: 30px; }
+
+/* ---------- Accueil : aperçu du palmarès ---------- */
+.ambiance-photo { margin: clamp(32px, 5vw, 48px) 0 32px; }
+.ambiance-photo img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.ambiance-caption { margin-top: 12px; color: var(--gray-500); font-size: 0.85rem; text-align: center; }
+.results-cta { text-align: center; }
+
 /* ---------- Cards génériques (grille de fonctionnalités) ---------- */
 .feature-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
 @media (min-width: 640px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1000px) { .feature-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* Variante à 3 colonnes (au lieu de 4) pour la grille de résultats de
+   l'accueil — doit rester après .feature-grid pour que la cascade gagne
+   (même spécificité, priorité au dernier déclaré). */
+.results-grid { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .results-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .feature-card {
   background: #fff;
@@ -744,6 +797,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 .social-list { display: flex; flex-direction: column; gap: 12px; }
 .social-list a { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.75); font-size: 0.92rem; transition: color 0.15s ease; }
 .social-list a:hover { color: #fff; }
+.social-list-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.75); font-size: 0.92rem; }
 .footer-bottom { padding: 20px 0 26px; }
 .footer-bottom p { color: rgba(255,255,255,0.48); font-size: 0.8rem; text-align: center; }
 
@@ -752,4 +806,5 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   html { scroll-behavior: auto; }
   [data-reveal] { transition: none; opacity: 1; transform: none; }
   .scroll-cue span { animation: none; }
+  .hero-photo { animation: none; }
 }

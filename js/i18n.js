@@ -18,33 +18,84 @@
 
   var TRANSLATIONS = {
     fr: {
-      nav: { home: "Accueil", project: "Le Projet", team: "L'Équipe", partners: "Partenaires", join: "Rejoindre" },
+      nav: { about: "À propos", project: "Projets", achievements: "Réalisations", team: "L'Équipe", partners: "Partenaires", join: "Rejoindre" },
       footer: {
         tagline: "Club étudiant biomédical — École de technologie supérieure, Montréal.",
         quicklinksTitle: "Liens rapides",
         followTitle: "Nous joindre",
+        address: "Local D-2014, ÉTS",
         rights: "Tous droits réservés."
       },
       home: {
         hero: {
-          eyebrow: "Club étudiant biomédical — ÉTS Montréal",
-          title: "Rendre la mobilité <span class=\"accent\">accessible à tous.</span>",
-          lead: "SynapsÉTS cherche à fournir une solution pour améliorer la qualité de vie des personnes ayant des difficultés de mobilité. Notre objectif à long terme est de créer un exosquelette qui renforce la mobilité et l'indépendance des individus confrontés à ces défis. Pour ce faire, nous visons à concevoir et fabriquer un exosquelette offrant un soutien et une assistance à la marche, à la station debout, à l'assise, à la montée des escaliers et à la navigation sur un terrain accidenté.",
-          cta1: "Rejoindre le club",
-          cta2: "Devenir partenaire"
+          badge: "Podium à ACE · 2023 · 2024",
+          title: "Redonner du mouvement, <span class=\"accent\">une articulation à la fois.</span>",
+          lead: "Le seul club biomédical de l'ÉTS. Nous concevons des technologies pour améliorer la mobilité et l'autonomie des personnes.",
+          cta1: "Découvrir le projet",
+          cta2: "Rejoindre le club"
+        },
+        facts: {
+          fact1Value: "Podium",
+          fact1Label: "à la compétition internationale d'exosquelettes ACE",
+          fact2Value: "10 ans",
+          fact2Label: "d'existence du club",
+          fact3Value: "Seul club",
+          fact3Label: "biomédical de l'ÉTS"
         },
         who: {
           tag: "Qui nous sommes",
           title: "Un club, une mission claire",
-          text: "SynapsÉTS est le seul club étudiant biomédical de l'ÉTS. Notre équipe multidisciplinaire conçoit et fabrique un exosquelette de marche, en développement actif à chaque session, avec l'ambition de le mener un jour en compétition internationale.",
-          button: "En savoir plus sur le projet"
+          text: "SynapsÉTS est le seul club biomédical de l'ÉTS. Des étudiants de plusieurs disciplines y conçoivent des technologies pour améliorer la mobilité et l'autonomie des personnes. Notre projet actuel est un exosquelette, et le club a l'ambition de grandir.",
+          button: "En savoir plus"
+        },
+        build: {
+          tag: "Ce qu'on construit",
+          title: "Un exosquelette centré sur le genou et la hanche",
+          alt: "Un membre du club en plein saut, équipé de l'exosquelette SynapsÉTS",
+          point1: "Conçu pour soutenir la marche",
+          point2: "Plus léger et moins invasif pour l'utilisateur",
+          point3: "Plus abordable que la génération précédente",
+          button: "Voir le projet"
+        },
+        results: {
+          tag: "Aperçu du palmarès",
+          title: "Nos résultats en compétition",
+          result1Title: "2026",
+          result1Text: "2e place, ACE (résultat à confirmer)",
+          result2Title: "2024",
+          result2Text: "1re place, ACE",
+          result3Title: "2023",
+          result3Text: "3e place, ACE",
+          ambianceAlt: "L'équipe SynapsÉTS à ACE 2026",
+          ambianceCaption: "L'équipe SynapsÉTS à ACE 2026",
+          button: "Toutes nos réalisations"
         },
         join: {
           tag: "Rejoins-nous",
-          title: "Viens contribuer à un projet qui change des vies",
-          text: "Aucune expérience préalable requise — seulement de la curiosité et de la motivation. Découvre comment t'impliquer, nous suivre ou venir nous rencontrer.",
-          button: "Rejoindre le club"
+          title: "Pas besoin d'être expert",
+          text: "Commence par le pas qui te convient.",
+          path1Title: "Nous suivre",
+          path1Button: "Instagram",
+          path2Title: "Passer nous voir",
+          path2Text: "Local D-2014, ÉTS",
+          path3Title: "Rejoindre",
+          path3Button: "Rejoindre le club"
+        },
+        orgs: {
+          title: "Vous êtes une entreprise ou un organisme ?",
+          text: "Aidez-nous à faire grandir le club : commandite, matériel, expertise.",
+          button: "Devenir partenaire"
         }
+      },
+      about: {
+        tag: "À propos",
+        title: "À propos de SynapsÉTS",
+        placeholder: "Contenu à venir."
+      },
+      achievements: {
+        tag: "Réalisations",
+        title: "Nos réalisations",
+        placeholder: "Contenu à venir."
       },
       project: {
         hero: {
@@ -155,33 +206,84 @@
     },
 
     en: {
-      nav: { home: "Home", project: "The Project", team: "Our Team", partners: "Partners", join: "Join Us" },
+      nav: { about: "About", project: "Projects", achievements: "Achievements", team: "Our Team", partners: "Partners", join: "Join Us" },
       footer: {
         tagline: "Biomedical student club — École de technologie supérieure, Montreal.",
         quicklinksTitle: "Quick Links",
         followTitle: "Get in Touch",
+        address: "Room D-2014, ÉTS",
         rights: "All rights reserved."
       },
       home: {
         hero: {
-          eyebrow: "Biomedical Student Club — ÉTS Montreal",
-          title: "Making mobility <span class=\"accent\">accessible to all.</span>",
-          lead: "SynapsÉTS aims to provide a solution to improve the quality of life of people with mobility challenges. Our long-term goal is to create an exoskeleton that strengthens mobility and independence for individuals facing these challenges. To do so, we aim to design and build an exoskeleton offering support and assistance for walking, standing, sitting, climbing stairs, and navigating uneven terrain.",
-          cta1: "Join the club",
-          cta2: "Become a partner"
+          badge: "Podium at ACE · 2023 · 2024",
+          title: "Restoring movement, <span class=\"accent\">one joint at a time.</span>",
+          lead: "The only biomedical club at ÉTS. We design technologies to improve people's mobility and independence.",
+          cta1: "Discover the project",
+          cta2: "Join the club"
+        },
+        facts: {
+          fact1Value: "Podium",
+          fact1Label: "at the ACE international exoskeleton competition",
+          fact2Value: "10 years",
+          fact2Label: "of the club's existence",
+          fact3Value: "Only club",
+          fact3Label: "biomedical club at ÉTS"
         },
         who: {
           tag: "Who we are",
           title: "One club, one clear mission",
-          text: "SynapsÉTS is the only biomedical student club at ÉTS. Our multidisciplinary team designs and builds a walking exoskeleton, in active development every semester, with the ambition to one day take it to international competition.",
-          button: "Learn more about the project"
+          text: "SynapsÉTS is the only biomedical club at ÉTS. Students from several disciplines design technologies to improve people's mobility and independence. Our current project is an exoskeleton, and the club has ambitions to grow.",
+          button: "Learn more"
+        },
+        build: {
+          tag: "What we're building",
+          title: "An exoskeleton centered on the knee and hip",
+          alt: "A club member mid-jump, wearing the SynapsÉTS exoskeleton",
+          point1: "Designed to support walking",
+          point2: "Lighter and less invasive for the user",
+          point3: "More affordable than the previous generation",
+          button: "See the project"
+        },
+        results: {
+          tag: "Achievements preview",
+          title: "Our competition results",
+          result1Title: "2026",
+          result1Text: "2nd place, ACE (result to be confirmed)",
+          result2Title: "2024",
+          result2Text: "1st place, ACE",
+          result3Title: "2023",
+          result3Text: "3rd place, ACE",
+          ambianceAlt: "The SynapsÉTS team at ACE 2026",
+          ambianceCaption: "The SynapsÉTS team at ACE 2026",
+          button: "All our achievements"
         },
         join: {
           tag: "Join us",
-          title: "Come contribute to a project that changes lives",
-          text: "No prior experience required — just curiosity and motivation. Find out how to get involved, follow us, or come meet us in person.",
-          button: "Join the club"
+          title: "No need to be an expert",
+          text: "Start with whichever step suits you.",
+          path1Title: "Follow us",
+          path1Button: "Instagram",
+          path2Title: "Come visit",
+          path2Text: "Room D-2014, ÉTS",
+          path3Title: "Join",
+          path3Button: "Join the club"
+        },
+        orgs: {
+          title: "Are you a company or organization?",
+          text: "Help us grow the club: sponsorship, equipment, expertise.",
+          button: "Become a partner"
         }
+      },
+      about: {
+        tag: "About",
+        title: "About SynapsÉTS",
+        placeholder: "Content coming soon."
+      },
+      achievements: {
+        tag: "Achievements",
+        title: "Our achievements",
+        placeholder: "Content coming soon."
       },
       project: {
         hero: {
@@ -306,6 +408,13 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var value = getPath(TRANSLATIONS[lang], el.getAttribute("data-i18n"));
       if (value !== undefined) el.innerHTML = value;
+    });
+
+    // Attribut alt (texte alternatif d'image) traduisible séparément de
+    // l'innerHTML, via data-i18n-alt="section.cle".
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var altValue = getPath(TRANSLATIONS[lang], el.getAttribute("data-i18n-alt"));
+      if (altValue !== undefined) el.setAttribute("alt", altValue);
     });
 
     document.querySelectorAll(".lang-btn").forEach(function (btn) {

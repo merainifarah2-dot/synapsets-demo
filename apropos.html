@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'Équipe — SynapsÉTS | Club biomédical ÉTS Montréal</title>
-<meta name="description" content="Découvrez l'équipe multidisciplinaire de SynapsÉTS, organisée par département : mécanique, électrique, logiciel, communications et direction.">
+<title>À propos — SynapsÉTS | Club biomédical ÉTS Montréal</title>
+<meta name="description" content="À propos de SynapsÉTS, le seul club étudiant biomédical de l'ÉTS Montréal.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +25,10 @@
     <div class="header-right">
       <nav class="main-nav" aria-label="Navigation principale">
         <ul>
-          <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="apropos.html" aria-current="page" data-i18n="nav.about">À propos</a></li>
           <li><a href="projet.html" data-i18n="nav.project">Projets</a></li>
           <li><a href="realisations.html" data-i18n="nav.achievements">Réalisations</a></li>
-          <li><a href="equipe.html" aria-current="page" data-i18n="nav.team">L'Équipe</a></li>
+          <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
           <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
         </ul>
       </nav>
@@ -48,10 +48,10 @@
 
   <div class="mobile-nav-panel" id="mobile-nav">
     <ul>
-      <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+      <li><a href="apropos.html" aria-current="page" data-i18n="nav.about">À propos</a></li>
       <li><a href="projet.html" data-i18n="nav.project">Projets</a></li>
       <li><a href="realisations.html" data-i18n="nav.achievements">Réalisations</a></li>
-      <li><a href="equipe.html" aria-current="page" data-i18n="nav.team">L'Équipe</a></li>
+      <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
       <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
       <li><a href="rejoindre.html" data-i18n="nav.join">Rejoindre</a></li>
     </ul>
@@ -62,42 +62,14 @@
 
   <section class="team-page-hero">
     <div class="container">
-      <p class="section-tag" data-reveal data-i18n="team.hero.tag">L'Équipe</p>
-      <h1 class="team-hero-title" data-reveal data-i18n="team.hero.title">Rencontre l'équipe</h1>
+      <p class="section-tag" data-reveal data-i18n="about.tag">À propos</p>
+      <h1 class="team-hero-title" data-reveal data-i18n="about.title">À propos de SynapsÉTS</h1>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="team-stage" id="team-stage">
-        <div id="team-departments"><!-- généré par js/team.js à partir du tableau de membres --></div>
-        <svg class="dept-connector-svg" id="dept-connector-svg" aria-hidden="true"></svg>
-        <div class="team-backdrop" id="team-backdrop" tabindex="-1"></div>
-
-        <aside class="member-panel" id="member-panel" aria-hidden="true">
-          <button type="button" class="modal-close member-panel-close" id="member-panel-close" aria-label="Fermer">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
-          </button>
-          <div class="member-panel-content" id="member-panel-content">
-            <div class="member-panel-photo" id="member-panel-photo"></div>
-            <h3 class="member-panel-name" id="member-panel-name"></h3>
-            <p class="member-panel-program" id="member-panel-program"></p>
-            <p class="member-panel-role-label" id="member-panel-role-label">Rôle</p>
-            <p class="member-panel-role-text" id="member-panel-role-text"></p>
-            <a href="#" target="_blank" rel="noopener" class="btn btn-primary member-panel-linkedin" id="member-panel-linkedin">LinkedIn</a>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-banner">
-    <div class="container cta-banner-inner">
-      <h2 data-reveal data-i18n="team.cta.title">Rejoins une équipe passionnée</h2>
-      <p data-reveal data-i18n="team.cta.text">Chaque département accueille de nouveaux membres à chaque session.</p>
-      <div class="cta-banner-actions" data-reveal>
-        <a href="rejoindre.html" class="btn btn-primary" data-i18n="team.cta.button">Rejoindre le club</a>
-      </div>
+      <p class="section-lead" data-reveal data-i18n="about.placeholder">Contenu à venir.</p>
     </div>
   </section>
 
@@ -161,6 +133,5 @@
 
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
-<script src="js/team.js"></script>
 </body>
 </html>

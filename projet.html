@@ -25,13 +25,15 @@
     <div class="header-right">
       <nav class="main-nav" aria-label="Navigation principale">
         <ul>
-          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
-          <li><a href="projet.html" aria-current="page" data-i18n="nav.project">Le Projet</a></li>
+          <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="projet.html" aria-current="page" data-i18n="nav.project">Projets</a></li>
+          <li><a href="realisations.html" data-i18n="nav.achievements">Réalisations</a></li>
           <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
           <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
-          <li><a href="rejoindre.html" data-i18n="nav.join">Rejoindre</a></li>
         </ul>
       </nav>
+
+      <a href="rejoindre.html" class="btn btn-primary btn-nav" data-i18n="nav.join">Rejoindre</a>
 
       <div class="lang-switch" role="group" aria-label="Choix de la langue / Language selector">
         <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
@@ -46,8 +48,9 @@
 
   <div class="mobile-nav-panel" id="mobile-nav">
     <ul>
-      <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
-      <li><a href="projet.html" aria-current="page" data-i18n="nav.project">Le Projet</a></li>
+      <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+      <li><a href="projet.html" aria-current="page" data-i18n="nav.project">Projets</a></li>
+      <li><a href="realisations.html" data-i18n="nav.achievements">Réalisations</a></li>
       <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
       <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
       <li><a href="rejoindre.html" data-i18n="nav.join">Rejoindre</a></li>
@@ -195,7 +198,9 @@
     <div class="footer-links">
       <h3 data-i18n="footer.quicklinksTitle">Liens rapides</h3>
       <ul class="footer-quicklinks">
-        <li><a href="projet.html" data-i18n="nav.project">Le Projet</a></li>
+        <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="projet.html" data-i18n="nav.project">Projets</a></li>
+        <li><a href="realisations.html" data-i18n="nav.achievements">Réalisations</a></li>
         <li><a href="equipe.html" data-i18n="nav.team">L'Équipe</a></li>
         <li><a href="partenaires.html" data-i18n="nav.partners">Partenaires</a></li>
         <li><a href="rejoindre.html" data-i18n="nav.join">Rejoindre</a></li>
@@ -216,13 +221,20 @@
           </a>
         </li>
         <li>
-          <a href="mailto:info@synapsets.ca">
+          <a href="mailto:synapsETS@ens.etsmtl.ca">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
               <rect x="3" y="5" width="18" height="14" rx="2"/>
               <path d="M4 6.5l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>info@synapsets.ca</span>
+            <span>synapsETS@ens.etsmtl.ca</span>
           </a>
+        </li>
+        <li class="social-list-item">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" stroke-linejoin="round"/>
+            <circle cx="12" cy="10" r="2.4"/>
+          </svg>
+          <span data-i18n="footer.address">Local D-2014, ÉTS</span>
         </li>
       </ul>
     </div>
