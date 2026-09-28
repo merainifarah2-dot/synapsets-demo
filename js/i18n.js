@@ -132,10 +132,10 @@
           tag: "L'Équipe",
           title: "Rencontre l'équipe"
         },
-        dept: { exec: "Exécutif / Direction", mec: "Mécanique", ele: "Électrique", log: "Logiciel", com: "Communications" },
+        demoBadge: "Données fictives — démonstration",
         cta: {
-          title: "Rejoins une équipe passionnée",
-          text: "Chaque département accueille de nouveaux membres à chaque session.",
+          title: "Ta place est ici",
+          text: "Le club grandit. Viens construire avec nous.",
           button: "Rejoindre le club"
         }
       },
@@ -320,10 +320,10 @@
           tag: "Our Team",
           title: "Meet the team"
         },
-        dept: { exec: "Executive / Leadership", mec: "Mechanical", ele: "Electrical", log: "Software", com: "Communications" },
+        demoBadge: "Fictional data — demo",
         cta: {
-          title: "Join a passionate team",
-          text: "Every department welcomes new members each semester.",
+          title: "There's a place for you here",
+          text: "The club is growing. Come build with us.",
           button: "Join the club"
         }
       },
