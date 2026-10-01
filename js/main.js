@@ -79,4 +79,31 @@
       heroMedia.classList.add("video-ready");
     });
   }
+
+  /* ---------- Curseur personnalisé (desktop uniquement) ----------
+     N'active le curseur custom que sur les pointeurs fins avec survol
+     (souris/trackpad) : (hover: none) ou pointer:coarse (tactile) gardent
+     le curseur natif intact. */
+  var pointerQuery = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)");
+  if (pointerQuery && pointerQuery.matches) {
+    var cursorEl = document.createElement("div");
+    cursorEl.className = "custom-cursor";
+    cursorEl.setAttribute("aria-hidden", "true");
+    cursorEl.innerHTML =
+      '<svg width="28" height="28" viewBox="0 0 28 28">' +
+      '<path class="custom-cursor-wing" d="M4 4 L13 14"/>' +
+      '<path class="custom-cursor-wing" d="M4 24 L13 14"/>' +
+      '<circle class="custom-cursor-dot" cx="16" cy="14" r="3.2"/>' +
+      "</svg>";
+    document.body.appendChild(cursorEl);
+    document.body.classList.add("custom-cursor-active");
+
+    document.addEventListener("mousemove", function (e) {
+      cursorEl.style.transform = "translate(" + e.clientX + "px, " + e.clientY + "px)";
+    });
+    document.addEventListener("mousedown", function () { cursorEl.classList.add("is-active"); });
+    document.addEventListener("mouseup", function () { cursorEl.classList.remove("is-active"); });
+    document.addEventListener("mouseleave", function () { cursorEl.style.opacity = "0"; });
+    document.addEventListener("mouseenter", function () { cursorEl.style.opacity = "1"; });
+  }
 })();

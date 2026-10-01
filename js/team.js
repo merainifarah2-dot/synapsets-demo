@@ -12,20 +12,25 @@ var DEPARTMENTS = [
 ];
 
 // DONNÉES FICTIVES DE DÉMONSTRATION, à remplacer par les vrais membres avec leur accord.
+// Tous les liens LinkedIn pointent pour l'instant vers la page de l'organisation
+// SynapsÉTS (placeholder) : à remplacer individuellement par le profil LinkedIn
+// de chaque membre une fois l'accord obtenu.
+var LINKEDIN_PLACEHOLDER = "https://www.linkedin.com/company/synapsets/";
+
 var TEAM_MEMBERS = [
-  { name: "Léa Fontaine", role: "Capitaine", program: "Génie mécanique", dept: "exec", photo: "", linkedin: "", fun: "Peut réciter toutes les lois de Newton en dansant." },
-  { name: "Malik Dubreuil", role: "Co-capitaine", program: "Génie électrique", dept: "exec", photo: "", linkedin: "", fun: "A soudé son premier circuit à 10 ans, dans la cuisine familiale." },
-  { name: "Camille Rivard", role: "Trésorière", program: "Génie des opérations et de la logistique", dept: "exec", photo: "", linkedin: "", fun: "Tient un budget plus organisé que son propre horaire." },
-  { name: "Étienne Boisvert", role: "VP Partenariats", program: "Génie logiciel", dept: "exec", photo: "", linkedin: "", fun: "N'a jamais raté un café avant une présentation." },
-  { name: "Anaïs Delorme", role: "VP Événements", program: "Génie de la construction", dept: "exec", photo: "", linkedin: "", fun: "Peut organiser un 5 à 7 en moins de 24 heures." },
-  { name: "Théo Lachapelle", role: "Structure", program: "Génie mécanique", dept: "mec", photo: "", linkedin: "", fun: "Dessine des pièces mécaniques même sur des napkins." },
-  { name: "Sofia Tremblay-Nadeau", role: "Usinage", program: "Génie de la production automatisée", dept: "mec", photo: "", linkedin: "", fun: "Connaît le nom de chaque fraise de la machine CNC." },
-  { name: "Nassim Gauthier", role: "Électronique de puissance", program: "Génie électrique", dept: "ele", photo: "", linkedin: "", fun: "Peut expliquer un onduleur avec des LEGO." },
-  { name: "Inès Marchand", role: "Capteurs", program: "Génie électrique", dept: "ele", photo: "", linkedin: "", fun: "Collectionne les capteurs comme d'autres collectionnent des timbres." },
-  { name: "Alexis Pelletier", role: "Contrôle", program: "Génie logiciel", dept: "log", photo: "", linkedin: "", fun: "Rêve littéralement en diagrammes de blocs." },
-  { name: "Mei-Ling Robitaille", role: "Infrastructure", program: "Génie des technologies de l'information", dept: "log", photo: "", linkedin: "", fun: "A déjà configuré un serveur pendant un cours de chimie." },
-  { name: "Jules Cormier", role: "Vidéo", program: "Génie de la construction", dept: "com", photo: "", linkedin: "", fun: "Voit toujours l'angle de caméra parfait, même en marchant." },
-  { name: "Maëlle Ouellet", role: "Réseaux sociaux", program: "Génie de la production automatisée", dept: "com", photo: "", linkedin: "", fun: "Répond aux DM plus vite qu'un chatbot." }
+  { name: "Léa Fontaine", role: "Capitaine", program: "Génie mécanique", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "lea.fontaine@synapsets.ca", fun: "Peut réciter toutes les lois de Newton en dansant." },
+  { name: "Malik Dubreuil", role: "Co-capitaine", program: "Génie électrique", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "malik.dubreuil@synapsets.ca", fun: "A soudé son premier circuit à 10 ans, dans la cuisine familiale." },
+  { name: "Camille Rivard", role: "Trésorière", program: "Génie des opérations et de la logistique", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "camille.rivard@synapsets.ca", fun: "Tient un budget plus organisé que son propre horaire." },
+  { name: "Étienne Boisvert", role: "VP Partenariats", program: "Génie logiciel", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "etienne.boisvert@synapsets.ca", fun: "N'a jamais raté un café avant une présentation." },
+  { name: "Anaïs Delorme", role: "VP Événements", program: "Génie de la construction", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "anais.delorme@synapsets.ca", fun: "Peut organiser un 5 à 7 en moins de 24 heures." },
+  { name: "Théo Lachapelle", role: "Structure", program: "Génie mécanique", dept: "mec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "theo.lachapelle@synapsets.ca", fun: "Dessine des pièces mécaniques même sur des napkins." },
+  { name: "Sofia Tremblay-Nadeau", role: "Usinage", program: "Génie de la production automatisée", dept: "mec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "sofia.tremblay-nadeau@synapsets.ca", fun: "Connaît le nom de chaque fraise de la machine CNC." },
+  { name: "Nassim Gauthier", role: "Électronique de puissance", program: "Génie électrique", dept: "ele", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "nassim.gauthier@synapsets.ca", fun: "Peut expliquer un onduleur avec des LEGO." },
+  { name: "Inès Marchand", role: "Capteurs", program: "Génie électrique", dept: "ele", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "ines.marchand@synapsets.ca", fun: "Collectionne les capteurs comme d'autres collectionnent des timbres." },
+  { name: "Alexis Pelletier", role: "Contrôle", program: "Génie logiciel", dept: "log", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "alexis.pelletier@synapsets.ca", fun: "Rêve littéralement en diagrammes de blocs." },
+  { name: "Mei-Ling Robitaille", role: "Infrastructure", program: "Génie des technologies de l'information", dept: "log", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "mei-ling.robitaille@synapsets.ca", fun: "A déjà configuré un serveur pendant un cours de chimie." },
+  { name: "Jules Cormier", role: "Vidéo", program: "Génie de la construction", dept: "com", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "jules.cormier@synapsets.ca", fun: "Voit toujours l'angle de caméra parfait, même en marchant." },
+  { name: "Maëlle Ouellet", role: "Réseaux sociaux", program: "Génie de la production automatisée", dept: "com", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "maelle.ouellet@synapsets.ca", fun: "Répond aux DM plus vite qu'un chatbot." }
 ];
 
 var UI = {
@@ -36,7 +41,8 @@ var UI = {
     close: "Fermer",
     prev: "Membre précédent",
     next: "Membre suivant",
-    linkedin: "LinkedIn"
+    linkedin: "LinkedIn",
+    email: "Courriel"
   },
   en: {
     all: "All",
@@ -45,7 +51,8 @@ var UI = {
     close: "Close",
     prev: "Previous member",
     next: "Next member",
-    linkedin: "LinkedIn"
+    linkedin: "LinkedIn",
+    email: "Email"
   }
 };
 
@@ -66,6 +73,7 @@ var modalRole = null;
 var modalFactLabel = null;
 var modalFact = null;
 var modalLinkedin = null;
+var modalEmail = null;
 var demoBadge = null;
 
 var currentFilter = "all";
@@ -300,10 +308,18 @@ function fillModal(member, lang) {
 
   if (member.linkedin) {
     modalLinkedin.href = member.linkedin;
-    modalLinkedin.textContent = t(lang, "linkedin");
+    modalLinkedin.setAttribute("aria-label", t(lang, "linkedin") + " — " + member.name);
     modalLinkedin.hidden = false;
   } else {
     modalLinkedin.hidden = true;
+  }
+
+  if (member.email) {
+    modalEmail.href = "mailto:" + member.email;
+    modalEmail.setAttribute("aria-label", t(lang, "email") + " — " + member.name);
+    modalEmail.hidden = false;
+  } else {
+    modalEmail.hidden = true;
   }
 }
 
@@ -347,8 +363,11 @@ function closeModal() {
 }
 
 function trapFocusKeydown(e) {
+  // Le focus trap couvre tout le backdrop (pas seulement #team-modal) car
+  // les flèches précédent/suivant sont maintenant des boutons visibles de
+  // part et d'autre du modal, en dehors de son cadre.
   var focusables = Array.prototype.slice.call(
-    modalEl.querySelectorAll('button:not([disabled]), a[href]')
+    modalBackdrop.querySelectorAll('button:not([disabled]), a[href]')
   ).filter(function (el) { return el.offsetParent !== null || el === document.activeElement; });
   if (!focusables.length) return;
   var first = focusables[0];
@@ -394,6 +413,7 @@ function init() {
   modalFactLabel = document.getElementById("team-modal-fact-label");
   modalFact = document.getElementById("team-modal-fact");
   modalLinkedin = document.getElementById("team-modal-linkedin");
+  modalEmail = document.getElementById("team-modal-email");
   demoBadge = document.getElementById("demo-badge");
 
   if (demoBadge) demoBadge.hidden = !DEMO;

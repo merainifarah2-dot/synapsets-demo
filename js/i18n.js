@@ -18,7 +18,7 @@
 
   var TRANSLATIONS = {
     fr: {
-      nav: { about: "À propos", project: "Projets", achievements: "Réalisations", team: "L'Équipe", partners: "Partenaires", join: "Rejoindre" },
+      nav: { home: "Accueil", about: "À propos", project: "Projets", achievements: "Réalisations", team: "L'Équipe", partners: "Partenaires", join: "Rejoindre" },
       footer: {
         tagline: "Club étudiant biomédical — École de technologie supérieure, Montréal.",
         quicklinksTitle: "Liens rapides",
@@ -28,19 +28,10 @@
       },
       home: {
         hero: {
-          badge: "Podium à ACE · 2023 · 2024",
           title: "Redonner du mouvement, <span class=\"accent\">une articulation à la fois.</span>",
           lead: "Le seul club biomédical de l'ÉTS. Nous concevons des technologies pour améliorer la mobilité et l'autonomie des personnes.",
           cta1: "Découvrir le projet",
           cta2: "Rejoindre le club"
-        },
-        facts: {
-          fact1Value: "Podium",
-          fact1Label: "à la compétition internationale d'exosquelettes ACE",
-          fact2Value: "10 ans",
-          fact2Label: "d'existence du club",
-          fact3Value: "Seul club",
-          fact3Label: "biomédical de l'ÉTS"
         },
         who: {
           tag: "Qui nous sommes",
@@ -54,28 +45,27 @@
           alt: "Un membre du club en plein saut, équipé de l'exosquelette SynapsÉTS",
           point1: "Conçu pour soutenir la marche",
           point2: "Plus léger et moins invasif pour l'utilisateur",
-          point3: "Plus abordable que la génération précédente",
+          point3: "Un projet qui réunit plusieurs génies : mécanique, électrique, logiciel et plus",
           button: "Voir le projet"
         },
-        results: {
-          tag: "Aperçu du palmarès",
-          title: "Nos résultats en compétition",
-          result1Title: "2026",
-          result1Text: "2e place, ACE (résultat à confirmer)",
-          result2Title: "2024",
-          result2Text: "1re place, ACE",
-          result3Title: "2023",
-          result3Text: "3e place, ACE",
-          ambianceAlt: "L'équipe SynapsÉTS à ACE 2026",
-          ambianceCaption: "L'équipe SynapsÉTS à ACE 2026",
-          button: "Toutes nos réalisations"
+        goals: {
+          tag: "Nos objectifs",
+          title: "Où on s'en va",
+          goal1Title: "Explorer de nouvelles possibilités",
+          goal1Text: "Continuer à faire évoluer l'exosquelette actuel.",
+          goal2Title: "Ouvrir de nouveaux projets",
+          goal2Text: "Explorer d'autres concepts dans le domaine biomédical.",
+          goal3Title: "Faire grandir le club",
+          goal3Text: "Rejoindre plus d'étudiants qui veulent s'impliquer."
         },
         join: {
           tag: "Rejoins-nous",
           title: "Pas besoin d'être expert",
           text: "Commence par le pas qui te convient.",
           path1Title: "Nous suivre",
-          path1Button: "Instagram",
+          path1Instagram: "Instagram",
+          path1Facebook: "Facebook",
+          path1Linkedin: "LinkedIn",
           path2Title: "Passer nous voir",
           path2Text: "Local D-2014, ÉTS",
           path3Title: "Rejoindre",
@@ -90,35 +80,49 @@
       about: {
         tag: "À propos",
         title: "À propos de SynapsÉTS",
-        placeholder: "Contenu à venir."
+        intro: "SynapsÉTS est un club étudiant biomédical de l'ÉTS. Notre but : améliorer la mobilité et l'autonomie des personnes, en concevant des technologies comme notre exosquelette.",
+        activities: "Concrètement, l'équipe conçoit, fabrique et teste ses prototypes, et représente l'ÉTS dans des compétitions internationales comme ACE."
       },
       achievements: {
         tag: "Réalisations",
         title: "Nos réalisations",
-        placeholder: "Contenu à venir."
+        ace2023: { title: "ACE 2023", result: "Résultat à confirmer" },
+        ace2024: { title: "ACE 2024", result: "Résultat à confirmer" },
+        ace2025: { title: "ACE 2025", result: "Résultat à confirmer" }
       },
       project: {
         hero: {
           title: "L'Exosquelette",
-          lead: "Un exosquelette de marche conçu, fabriqué et amélioré par les étudiant·e·s de l'ÉTS, session après session."
+          lead: "Un exosquelette de marche conçu, fabriqué et amélioré par les étudiant·e·s de l'ÉTS, année après année."
         },
         intro: {
           tag: "Vue d'ensemble",
           title: "Un cycle d'amélioration continue",
           text: "Depuis sa création, SynapsÉTS conçoit et fabrique un exosquelette offrant un soutien et une assistance à la marche, à la station debout, à l'assise, à la montée des escaliers et à la navigation sur un terrain accidenté. Structure, électronique, capteurs et contrôle sont révisés en parallèle pour se rapprocher d'un dispositif fiable et confortable."
         },
-        feature1: { title: "Unique à l'ÉTS", text: "Premier et seul club biomédical de l'école : une équipe multidisciplinaire qui combine génie mécanique, électrique, logiciel et biomédical." },
-        feature2: { title: "Développement actif", text: "Prototypage, tests et itérations continus. Le projet évolue à chaque session avec de nouveaux jalons techniques." },
-        feature3: { title: "Module de cheville", text: "L'équipe travaille actuellement sur l'implémentation de la cheville, une étape clé pour un mouvement naturel et une meilleure absorption d'impact." },
-        feature4: { title: "Objectifs de compétition", text: "À terme, le club vise à représenter l'ÉTS dans des compétitions internationales comme le Cybathlon et les ASTM International Exo Games." },
+        feature1: { title: "Unique à l'ÉTS", text: "Le seul club de l'ÉTS dédié aux technologies d'assistance à la mobilité : une équipe multidisciplinaire qui combine génie mécanique, électrique et logiciel." },
+        feature2: { title: "Développement actif", text: "Prototypage, tests et itérations continus. Le projet évolue à chaque année avec de nouveaux jalons techniques." },
+        feature3: { title: "Amélioration continue", text: "L'équipe est toujours à la recherche de nouvelles façons d'améliorer le prototype, en testant de nouvelles approches." },
+        feature4: { title: "Objectifs de compétition", text: "À terme, le club vise à représenter l'ÉTS dans des compétitions internationales comme la compétition ACE (Applied Collegiate Exoskeleton), le Cybathlon et les ASTM International Exo Games." },
         timeline: {
           tag: "Feuille de route",
           title: "Les grandes étapes du projet"
         },
         step1: { title: "Conception & premier prototype", text: "Définition de l'architecture mécanique et des matériaux (aluminium, impressions 3D), puis assemblage d'un premier exosquelette fonctionnel pour valider le concept." },
-        step2: { title: "Implémentation de la cheville", badge: "En cours", text: "Intégration d'un module de cheville actif pour un mouvement plus naturel et une meilleure absorption d'impact." },
+        step2: { title: "Amélioration continue du prototype", badge: "En cours", text: "L'équipe teste de nouvelles approches en continu pour améliorer le confort, la robustesse et la performance du prototype." },
         step3: { title: "Tests sur terrain accidenté", text: "Validation de la stabilité et de l'assistance à la marche hors laboratoire." },
         step4: { title: "Compétitions internationales", text: "Préparation en vue du Cybathlon et des ASTM International Exo Games." },
+        reach: {
+          tag: "Projet antérieur",
+          title: "Reach — le bras robotisé",
+          text: "Reach était un bras robotisé d'assistance, un projet antérieur du club exploré avant l'exosquelette actuel."
+        },
+        headset: {
+          tag: "Piste explorée",
+          title: "Le casque à ondes cérébrales",
+          text: "Le casque à ondes cérébrales est une piste explorée par le club pour la lecture de signaux cérébraux. Il ne s'agit pas d'un projet actif confirmé."
+        },
+        photoSoon: "Photo à venir",
         cta: {
           title: "Envie de travailler sur l'exosquelette ?",
           text: "Découvre l'équipe derrière le projet, deviens partenaire, ou rejoins directement le club.",
@@ -173,65 +177,37 @@
         currentSponsors: {
           tag: "Nos sponsors",
           title: "Nos sponsors actuels",
-          emptyText: "Nos premiers partenaires seront affichés ici. Soyez parmi les premiers à soutenir SynapsÉTS !"
+          emptyText: "Nos premiers partenaires seront affichés ici, par palier. Soyez parmi les premiers à soutenir SynapsÉTS !",
+          diamant: "Diamant",
+          or: "Or",
+          argent: "Argent",
+          bronze: "Bronze",
+          comingSoon: "À venir"
         }
       },
       join: {
         hero: {
           title: "Rejoins SynapsÉTS",
-          lead: "Que tu veuilles t'impliquer activement, simplement suivre nos avancées, ou venir nous voir en personne : il y a une façon de rejoindre l'aventure qui te convient."
+          lead: "Peu importe ta discipline, il y a une place pour toi dans l'équipe."
         },
-        steps: {
-          tag: "Comment ça marche",
-          title: "De la curiosité à l'équipe",
-          step1: { title: "Viens nous voir ou écris-nous", text: "Passe au local D-2014 ou envoie-nous un courriel pour poser tes questions." },
-          step2: { title: "Fais ta demande d'adhésion", text: "L'adhésion se fait par le formulaire officiel des clubs étudiants de l'ÉTS." },
-          step3: { title: "Suis la formation de base", text: "La formation de base des nouveaux membres de la Régie des clubs étudiants est obligatoire pour l'accès aux locaux et aux bourses d'implication." },
-          step4: { title: "Rejoins ton équipe", text: "Tu es accueilli(e) dans l'équipe qui correspond à tes intérêts." },
-          link: "Voir la page du club sur le site de l'ÉTS"
+        mainCta: {
+          button: "Nous écrire",
+          local: "Tu peux aussi passer nous voir au local D-2014, ÉTS."
         },
-        focus: {
+        teams: {
           tag: "Nos équipes",
-          title: "Trouve ta place",
-          lead: "Toutes les disciplines sont les bienvenues. Voici où on peut avoir besoin de toi.",
-          mec: { title: "Mécanique", text: "Conception et amélioration de la structure de l'exosquelette." },
-          ele: { title: "Électrique", text: "Circuits imprimés, capteurs et électronique embarquée." },
-          log: { title: "Logiciel", text: "Programmation du contrôle de l'exosquelette, site web et documentation." },
-          com: { title: "Communication", text: "Réseaux sociaux, vidéo, événements et partenariats." }
-        },
-        paths: { tag: "Nous approcher", title: "Trois façons de nous approcher" },
-        path1: {
-          title: "Devenir membre actif",
-          text: "Étudiant(e) en génie mécanique, électrique, logiciel, biomédical ou dans un domaine connexe : il y a peut-être une place pour toi dans l'équipe. Écris-nous pour en discuter.",
-          button: "Nous écrire"
-        },
-        path2: {
-          title: "Nous suivre",
-          text: "Pas prêt(e) à t'engager tout de suite ? Suis nos avancées et nos coulisses.",
-          instagram: "Instagram",
-          linkedin: "LinkedIn"
-        },
-        path3: {
-          title: "Nous visiter",
-          text: "Le club t'ouvre ses portes au local D-2014 de l'ÉTS. Viens voir l'exosquelette de près et poser tes questions à l'équipe."
-        },
-        projectIdea: {
-          title: "Tu veux porter un projet ?",
-          text: "Une idée, ou l'envie de diriger un projet ? Écris-nous.",
-          button: "Nous écrire"
-        },
-        finalCta: {
-          tag: "Dernière étape",
-          title: "Prêt(e) à te lancer&nbsp;?",
-          text: "Une question avant de commencer ? Écris-nous.",
-          button1: "Faire ma demande d'adhésion",
-          button2: "J'ai une question"
+          title: "Les équipes du club",
+          lead: "Écris-nous ou viens nous voir pour plus de détails sur chaque équipe.",
+          mec: { title: "Mécanique", item1: "Conception de la structure de l'exosquelette", item2: "Amélioration continue du prototype" },
+          ele: { title: "Électrique", item1: "Circuits imprimés", item2: "Capteurs", item3: "Électronique embarquée" },
+          log: { title: "Logiciel", item1: "Contrôle de l'exosquelette", item2: "Site web", item3: "Documentation" },
+          com: { title: "Communication", item1: "Réseaux sociaux", item2: "Vidéo", item3: "Événements et partenariats" }
         }
       }
     },
 
     en: {
-      nav: { about: "About", project: "Projects", achievements: "Achievements", team: "Our Team", partners: "Partners", join: "Join Us" },
+      nav: { home: "Home", about: "About", project: "Projects", achievements: "Achievements", team: "Our Team", partners: "Partners", join: "Join Us" },
       footer: {
         tagline: "Biomedical student club — École de technologie supérieure, Montreal.",
         quicklinksTitle: "Quick Links",
@@ -241,19 +217,10 @@
       },
       home: {
         hero: {
-          badge: "Podium at ACE · 2023 · 2024",
           title: "Restoring movement, <span class=\"accent\">one joint at a time.</span>",
           lead: "The only biomedical club at ÉTS. We design technologies to improve people's mobility and independence.",
           cta1: "Discover the project",
           cta2: "Join the club"
-        },
-        facts: {
-          fact1Value: "Podium",
-          fact1Label: "at the ACE international exoskeleton competition",
-          fact2Value: "10 years",
-          fact2Label: "of the club's existence",
-          fact3Value: "Only club",
-          fact3Label: "biomedical club at ÉTS"
         },
         who: {
           tag: "Who we are",
@@ -267,28 +234,27 @@
           alt: "A club member mid-jump, wearing the SynapsÉTS exoskeleton",
           point1: "Designed to support walking",
           point2: "Lighter and less invasive for the user",
-          point3: "More affordable than the previous generation",
+          point3: "A project that brings together multiple engineering fields: mechanical, electrical, software, and more",
           button: "See the project"
         },
-        results: {
-          tag: "Achievements preview",
-          title: "Our competition results",
-          result1Title: "2026",
-          result1Text: "2nd place, ACE (result to be confirmed)",
-          result2Title: "2024",
-          result2Text: "1st place, ACE",
-          result3Title: "2023",
-          result3Text: "3rd place, ACE",
-          ambianceAlt: "The SynapsÉTS team at ACE 2026",
-          ambianceCaption: "The SynapsÉTS team at ACE 2026",
-          button: "All our achievements"
+        goals: {
+          tag: "Our goals",
+          title: "Where we're headed",
+          goal1Title: "Explore new possibilities",
+          goal1Text: "Keep improving the current exoskeleton.",
+          goal2Title: "Open up new projects",
+          goal2Text: "Explore other concepts in the biomedical field.",
+          goal3Title: "Grow the club",
+          goal3Text: "Bring in more students who want to get involved."
         },
         join: {
           tag: "Join us",
           title: "No need to be an expert",
           text: "Start with whichever step suits you.",
           path1Title: "Follow us",
-          path1Button: "Instagram",
+          path1Instagram: "Instagram",
+          path1Facebook: "Facebook",
+          path1Linkedin: "LinkedIn",
           path2Title: "Come visit",
           path2Text: "Room D-2014, ÉTS",
           path3Title: "Join",
@@ -303,35 +269,49 @@
       about: {
         tag: "About",
         title: "About SynapsÉTS",
-        placeholder: "Content coming soon."
+        intro: "SynapsÉTS is a biomedical student club at ÉTS. Our goal: improve people's mobility and independence by designing technologies like our exoskeleton.",
+        activities: "Concretely, the team designs, builds, and tests its prototypes, and represents ÉTS in international competitions such as ACE."
       },
       achievements: {
         tag: "Achievements",
         title: "Our achievements",
-        placeholder: "Content coming soon."
+        ace2023: { title: "ACE 2023", result: "Result to be confirmed" },
+        ace2024: { title: "ACE 2024", result: "Result to be confirmed" },
+        ace2025: { title: "ACE 2025", result: "Result to be confirmed" }
       },
       project: {
         hero: {
           title: "The Exoskeleton",
-          lead: "A walking exoskeleton designed, built, and improved by ÉTS students, semester after semester."
+          lead: "A walking exoskeleton designed, built, and improved by ÉTS students, year after year."
         },
         intro: {
           tag: "Overview",
           title: "A cycle of continuous improvement",
           text: "Since its creation, SynapsÉTS has been designing and building an exoskeleton that offers support and assistance for walking, standing, sitting, climbing stairs, and navigating uneven terrain. Structure, electronics, sensors, and control are refined in parallel to move closer to a reliable and comfortable device."
         },
-        feature1: { title: "Unique at ÉTS", text: "The school's first and only biomedical club: a multidisciplinary team combining mechanical, electrical, software, and biomedical engineering." },
-        feature2: { title: "Active development", text: "Continuous prototyping, testing, and iteration. The project evolves every semester with new technical milestones." },
-        feature3: { title: "Ankle module", text: "The team is currently working on implementing the ankle, a key step toward more natural movement and better impact absorption." },
-        feature4: { title: "Competition goals", text: "Ultimately, the club aims to represent ÉTS in international competitions such as the Cybathlon and the ASTM International Exo Games." },
+        feature1: { title: "Unique at ÉTS", text: "The only club at ÉTS dedicated to mobility-assistance technologies: a multidisciplinary team combining mechanical, electrical, and software engineering." },
+        feature2: { title: "Active development", text: "Continuous prototyping, testing, and iteration. The project evolves every year with new technical milestones." },
+        feature3: { title: "Continuous improvement", text: "The team is always looking for new ways to improve the prototype by testing new approaches." },
+        feature4: { title: "Competition goals", text: "Ultimately, the club aims to represent ÉTS in international competitions such as the ACE competition (Applied Collegiate Exoskeleton), the Cybathlon, and the ASTM International Exo Games." },
         timeline: {
           tag: "Roadmap",
           title: "Key milestones of the project"
         },
         step1: { title: "Design & first prototype", text: "Defining the mechanical architecture and materials (aluminum, 3D printing), then assembling a first functional exoskeleton to validate the concept." },
-        step2: { title: "Ankle implementation", badge: "In progress", text: "Integrating an active ankle module for more natural movement and better impact absorption." },
+        step2: { title: "Continuous prototype improvement", badge: "In progress", text: "The team continuously tests new approaches to improve the prototype's comfort, robustness, and performance." },
         step3: { title: "Uneven-terrain testing", text: "Validating stability and walking assistance outside the lab." },
         step4: { title: "International competitions", text: "Preparing for the Cybathlon and the ASTM International Exo Games." },
+        reach: {
+          tag: "Past project",
+          title: "Reach — the robotic arm",
+          text: "Reach was an assistive robotic arm, an earlier club project explored before the current exoskeleton."
+        },
+        headset: {
+          tag: "Explored idea",
+          title: "The brainwave headset",
+          text: "The brainwave headset is an idea the club has explored for reading brain signals. It is not a confirmed active project."
+        },
+        photoSoon: "Photo coming soon",
         cta: {
           title: "Want to work on the exoskeleton?",
           text: "Meet the team behind the project, become a partner, or join the club directly.",
@@ -386,59 +366,31 @@
         currentSponsors: {
           tag: "Our sponsors",
           title: "Our current sponsors",
-          emptyText: "Our first partners will be featured here. Be among the first to support SynapsÉTS!"
+          emptyText: "Our first partners will be featured here, by tier. Be among the first to support SynapsÉTS!",
+          diamant: "Diamond",
+          or: "Gold",
+          argent: "Silver",
+          bronze: "Bronze",
+          comingSoon: "Coming soon"
         }
       },
       join: {
         hero: {
           title: "Join SynapsÉTS",
-          lead: "Whether you want to get actively involved, simply follow our progress, or come see us in person: there's a way to join the adventure that fits you."
+          lead: "Whatever your discipline, there's a place for you on the team."
         },
-        steps: {
-          tag: "How it works",
-          title: "From curiosity to the team",
-          step1: { title: "Come see us or write to us", text: "Stop by room D-2014 or send us an email to ask your questions." },
-          step2: { title: "Apply for membership", text: "Membership goes through the ÉTS student clubs' official form." },
-          step3: { title: "Complete the basic training", text: "The Régie des clubs étudiants' basic training for new members is mandatory for room access and involvement grants." },
-          step4: { title: "Join your team", text: "You're welcomed into the team that matches your interests." },
-          link: "See the club's page on the ÉTS website"
+        mainCta: {
+          button: "Write to us",
+          local: "You can also come see us at room D-2014, ÉTS."
         },
-        focus: {
+        teams: {
           tag: "Our teams",
-          title: "Find your place",
-          lead: "Every discipline is welcome. Here's where we might need you.",
-          mec: { title: "Mechanical", text: "Design and improvement of the exoskeleton's structure." },
-          ele: { title: "Electrical", text: "Printed circuits, sensors, and embedded electronics." },
-          log: { title: "Software", text: "Programming the exoskeleton's control, website, and documentation." },
-          com: { title: "Communications", text: "Social media, video, events, and partnerships." }
-        },
-        paths: { tag: "Reach out", title: "Three ways to reach us" },
-        path1: {
-          title: "Become an active member",
-          text: "Studying mechanical, electrical, software, biomedical engineering, or a related field: there might be a place for you on the team. Write to us to talk about it.",
-          button: "Write to us"
-        },
-        path2: {
-          title: "Follow us",
-          text: "Not ready to commit just yet? Follow our progress and behind-the-scenes.",
-          instagram: "Instagram",
-          linkedin: "LinkedIn"
-        },
-        path3: {
-          title: "Come visit",
-          text: "The club opens its doors at ÉTS room D-2014. Come see the exoskeleton up close and ask the team your questions."
-        },
-        projectIdea: {
-          title: "Want to lead a project?",
-          text: "Got an idea, or want to lead a project? Write to us.",
-          button: "Write to us"
-        },
-        finalCta: {
-          tag: "Last step",
-          title: "Ready to get started&nbsp;?",
-          text: "Got a question before you begin? Write to us.",
-          button1: "Apply for membership",
-          button2: "I have a question"
+          title: "The club's teams",
+          lead: "Write to us or come see us for more details on each team.",
+          mec: { title: "Mechanical", item1: "Designing the exoskeleton's structure", item2: "Continuous improvement of the prototype" },
+          ele: { title: "Electrical", item1: "Printed circuits", item2: "Sensors", item3: "Embedded electronics" },
+          log: { title: "Software", item1: "Exoskeleton control", item2: "Website", item3: "Documentation" },
+          com: { title: "Communications", item1: "Social media", item2: "Video", item3: "Events and partnerships" }
         }
       }
     }

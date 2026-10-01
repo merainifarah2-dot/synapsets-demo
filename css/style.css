@@ -183,7 +183,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 
 .brand { display: flex; align-items: center; flex-shrink: 0; }
 /* Logo officiel (assets/logo.webp), ratio ~4.07:1 (mot-symbole + tagline). */
-.brand-logo { height: 40px; width: auto; display: block; }
+.brand-logo { height: 52px; width: auto; display: block; }
 
 .header-right { display: flex; align-items: center; gap: 14px; }
 
@@ -278,7 +278,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   .nav-toggle, .mobile-nav-panel { display: none; }
   .main-nav { display: block; }
   .btn-nav { display: inline-flex; }
-  .brand-logo { height: 48px; }
+  .brand-logo { height: 62px; }
 }
 
 /* Très petits écrans (ex: 320px) : resserrer le header pour éviter tout
@@ -288,9 +288,14 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   .container { padding: 0 16px; }
   .header-right { gap: 8px; }
   .lang-btn { padding: 6px 8px; font-size: 0.68rem; }
-  .brand-logo { height: 32px; }
+  .brand-logo { height: 38px; }
   .btn { white-space: normal; text-align: center; }
 }
+
+/* Icône bonbonne à gaz dans le bouton "Rejoindre" du header : la silhouette
+   complète en clip-path était illisible à cette taille de bouton, donc on
+   garde un bouton rectangulaire classique + une icône à gauche du texte. */
+.btn-nav-icon { flex-shrink: 0; }
 
 /* ---------- Hero (page d'accueil) ---------- */
 .hero {
@@ -424,24 +429,12 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   opacity: 0.06;
   pointer-events: none;
   z-index: 0;
+  animation: logoWatermarkSpin 50s linear infinite;
 }
-
-/* ---------- Accueil : bande de faits (sous le hero) ---------- */
-.facts-strip { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
-.facts-grid { display: grid; grid-template-columns: 1fr; }
-@media (min-width: 780px) { .facts-grid { grid-template-columns: repeat(3, 1fr); } }
-.fact-item {
-  padding: 30px 24px;
-  text-align: center;
-  border-bottom: 1px solid var(--gray-200);
+@keyframes logoWatermarkSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-.fact-item:last-child { border-bottom: none; }
-@media (min-width: 780px) {
-  .fact-item { border-bottom: none; border-right: 1px solid var(--gray-200); }
-  .fact-item:last-child { border-right: none; }
-}
-.fact-value { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 6px; }
-.fact-label { color: var(--gray-500); font-size: 0.88rem; max-width: 280px; margin: 0 auto; }
 
 /* ---------- Accueil : "Ce qu'on construit" (image + texte) ---------- */
 .build-split { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
@@ -449,18 +442,12 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 .build-image img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 .build-list { margin-bottom: 30px; }
 
-/* ---------- Accueil : aperçu du palmarès ---------- */
-.ambiance-photo { margin: clamp(32px, 5vw, 48px) 0 32px; }
-.ambiance-photo img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
-.ambiance-caption { margin-top: 12px; color: var(--gray-500); font-size: 0.85rem; text-align: center; }
-.results-cta { text-align: center; }
-
 /* ---------- Cards génériques (grille de fonctionnalités) ---------- */
 .feature-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
 @media (min-width: 640px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1000px) { .feature-grid { grid-template-columns: repeat(4, 1fr); } }
 
-/* Variante à 3 colonnes (au lieu de 4) pour la grille de résultats de
+/* Variante à 3 colonnes (au lieu de 4) pour la grille "Nos objectifs" de
    l'accueil — doit rester après .feature-grid pour que la cascade gagne
    (même spécificité, priorité au dernier déclaré). */
 .results-grid { grid-template-columns: 1fr; }
@@ -542,6 +529,24 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   .roadmap-step { flex-direction: column; gap: 10px; padding: 30px 2px; }
   .roadmap-step-number { width: auto; }
 }
+
+/* ---------- À propos : grille de photos à venir ---------- */
+.about-placeholder-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 560px; }
+@media (min-width: 560px) { .about-placeholder-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Projet : autres projets (placeholder photo + texte) ---------- */
+.legacy-project { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; }
+.placeholder-photo {
+  width: 150px; height: 150px; flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  background: repeating-linear-gradient(45deg, var(--gray-100), var(--gray-100) 10px, var(--gray-50) 10px, var(--gray-50) 20px);
+  border: 1px dashed var(--gray-300);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px;
+  color: var(--gray-400);
+}
+.placeholder-photo span { font-size: 0.76rem; color: var(--gray-500); }
+.legacy-project-text { flex: 1; min-width: 240px; color: var(--gray-700); font-size: 0.98rem; line-height: 1.7; }
 
 /* ---------- Barre de progression de scroll (page Projet) ---------- */
 .roadmap-progress {
@@ -708,8 +713,10 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   background: #fff;
   border-radius: var(--radius-lg);
   width: 100%;
-  max-width: 900px;
-  max-height: 88vh;
+  max-width: 940px;
+  max-height: 90vh;
+  padding: 24px;
+  gap: 28px;
   display: flex;
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(7, 22, 48, 0.35);
@@ -719,10 +726,15 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 }
 .team-modal-backdrop.is-open .team-modal { transform: translateY(0); opacity: 1; }
 
+/* La photo est une carte à coins arrondis à l'intérieur du modal (carte
+   dans une carte), avec l'espace de .team-modal (padding) autour d'elle,
+   plutôt que collée aux bords du modal. */
 .team-modal-media {
   position: relative;
-  flex: 0 0 42%;
+  flex: 0 0 38%;
   min-height: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
   background: var(--navy);
 }
 .team-modal-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -732,7 +744,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   font-family: var(--font-display); font-weight: 700; color: #fff; font-size: 3rem;
 }
 
-.team-modal-body { flex: 1; padding: 40px 36px; overflow-y: auto; }
+.team-modal-body { flex: 1; padding: 14px 12px 14px 0; overflow-y: auto; }
 .team-modal-name { font-family: var(--font-body); color: var(--red); font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; }
 .team-modal-program { color: var(--gray-500); font-size: 0.95rem; margin-bottom: 4px; }
 .team-modal-dept { color: var(--gray-500); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; margin-bottom: 22px; }
@@ -748,9 +760,21 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   border-top: 1px solid var(--gray-100);
   padding-top: 20px;
 }
-.team-modal-fact { color: var(--gray-700); font-size: 0.98rem; line-height: 1.65; margin-bottom: 28px; }
-.team-modal-linkedin { display: inline-flex; }
-.team-modal-linkedin:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.team-modal-fact { color: var(--gray-700); font-size: 0.98rem; line-height: 1.65; margin-bottom: 24px; }
+
+/* Contact : deux petites icônes côte à côte (LinkedIn + courriel direct),
+   remplace l'ancien bouton LinkedIn plein-largeur. */
+.team-modal-contact { display: flex; gap: 10px; }
+.team-modal-contact-btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  color: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.team-modal-contact-btn:hover { background: var(--navy); color: #fff; }
+.team-modal-contact-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 
 .team-modal-close {
   position: absolute; top: 16px; right: 16px;
@@ -767,11 +791,14 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 .team-modal-close:hover { background: var(--gray-200); }
 .team-modal-close:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 
+/* Flèches de navigation façon galerie : de part et d'autre du MODAL (et
+   non plus à l'intérieur du cadre de la photo), positionnées sur le fond
+   sombre du backdrop. */
 .team-modal-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 38px; height: 38px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   background: rgba(255,255,255,0.92);
   border: none;
@@ -779,19 +806,20 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
+  z-index: 310;
   transition: background-color 0.15s ease;
 }
-.team-modal-prev { left: 12px; }
-.team-modal-next { right: 12px; }
+.team-modal-prev { left: clamp(8px, 4vw, 32px); }
+.team-modal-next { right: clamp(8px, 4vw, 32px); }
 .team-modal-nav:hover { background: #fff; }
 .team-modal-nav:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .team-modal-nav:disabled { opacity: 0.35; cursor: default; }
 
 @media (max-width: 760px) {
   .team-modal-backdrop { padding: 0; }
-  .team-modal { flex-direction: column; max-width: 100%; max-height: 100vh; height: 100%; border-radius: 0; }
-  .team-modal-media { flex: 0 0 auto; height: 38vh; min-height: 220px; }
-  .team-modal-body { padding: 28px 22px 40px; }
+  .team-modal { flex-direction: column; max-width: 100%; max-height: 100vh; height: 100%; border-radius: 0; padding: 14px; gap: 16px; }
+  .team-modal-media { flex: 0 0 auto; height: 34vh; min-height: 200px; border-radius: var(--radius-md); }
+  .team-modal-body { padding: 4px 4px 32px; }
 }
 
 /* ---------- Partenaires ---------- */
@@ -838,23 +866,24 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 /* Aide sans partenariat structuré */
 .non-structured-help { max-width: 720px; }
 
-/* Nos sponsors actuels : état vide honnête, sans faux noms */
-.sponsors-empty { text-align: center; padding-top: 8px; }
-.sponsors-placeholder-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  max-width: 520px;
-  margin: 0 auto 28px;
-}
-@media (min-width: 560px) { .sponsors-placeholder-grid { grid-template-columns: repeat(4, 1fr); } }
-.sponsor-placeholder {
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius-md);
-  background: repeating-linear-gradient(45deg, var(--gray-100), var(--gray-100) 10px, var(--gray-50) 10px, var(--gray-50) 20px);
+/* Nos sponsors actuels : paliers Diamant/Or/Argent/Bronze, honnêtes quand
+   vides (zone "À venir"), sans faux noms. */
+.sponsor-tiers { display: flex; flex-direction: column; }
+.sponsor-tier-group { display: flex; align-items: center; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--gray-200); flex-wrap: wrap; }
+.sponsor-tier-group:last-child { border-bottom: none; }
+.sponsor-tier-group .tier-badge { flex-shrink: 0; margin-bottom: 0; width: 110px; text-align: center; }
+.sponsor-tier-zone {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 0.92rem;
+  padding: 18px 20px;
   border: 1px dashed var(--gray-300);
+  border-radius: var(--radius-md);
+  background: var(--gray-50);
 }
-.sponsors-empty-text { color: var(--gray-500); font-size: 0.95rem; max-width: 480px; margin: 0 auto; }
+.tier-diamant { background: #dfeefc; color: #2563a8; }
 
 /* ---------- Rejoindre : parcours ---------- */
 .paths-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
@@ -868,34 +897,14 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 /* ---------- Rejoindre : hero aligné sur la marge du conteneur ---------- */
 .join-hero-inner { margin-left: 0; }
 
-/* ---------- Rejoindre : parcours en 4 étapes ---------- */
-.step-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 28px 24px; }
-.step-number { font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; color: var(--red); opacity: 0.85; line-height: 1; margin: 0 0 16px; }
-.step-card h3 { font-family: var(--font-display); font-size: 1.02rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.01em; color: var(--navy); margin-bottom: 10px; }
-.step-card p { color: var(--gray-700); font-size: 0.93rem; line-height: 1.6; }
+/* ---------- Rejoindre : gros bouton mailto centré ---------- */
+.join-cta-main { text-align: center; }
+.join-cta-button { padding: 20px 52px; font-size: 1.02rem; }
+.join-local-note { color: var(--gray-500); font-size: 0.92rem; margin-top: 18px; }
 
-.discreet-link { display: inline-flex; align-items: center; color: var(--gray-500); font-size: 0.9rem; text-decoration: underline; text-underline-offset: 3px; margin-top: 28px; transition: color 0.15s ease; }
-.discreet-link:hover { color: var(--navy); }
-.discreet-link:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 3px; }
-
-/* ---------- Rejoindre : encart "porter un projet" ---------- */
-.project-banner {
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  padding: clamp(26px, 4vw, 38px);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.project-banner-text h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; }
-.project-banner-text p { color: var(--gray-700); font-size: 0.95rem; line-height: 1.6; max-width: 520px; }
-.project-banner .btn { flex-shrink: 0; }
-
-/* ---------- Rejoindre : appel final ---------- */
-.join-final-title { text-wrap: balance; }
+/* ---------- Rejoindre : grille 2x2 des équipes ---------- */
+.teams-square-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 640px) { .teams-square-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ---------- Focus visible générique (boutons + liens sociaux) ---------- */
 .btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
@@ -918,10 +927,33 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 .footer-bottom { padding: 20px 0 26px; }
 .footer-bottom p { color: rgba(255,255,255,0.48); font-size: 0.8rem; text-align: center; }
 
+/* ---------- Curseur personnalisé (desktop uniquement) ----------
+   Deux traits gris formant une pointe de flèche ouverte, avec un cercle
+   bleu marine (rouge au clic) entre les deux, en référence à un noeud de
+   branche du logo SynapsÉTS. Activé en JS (js/main.js) seulement quand
+   (hover: hover) and (pointer: fine) correspond, donc jamais sur tactile. */
+.custom-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 28px; height: 28px;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.15s ease;
+}
+.custom-cursor-wing { fill: none; stroke: var(--gray-400); stroke-width: 2.4; stroke-linecap: round; }
+.custom-cursor-dot { fill: var(--navy); transition: fill 0.1s ease; }
+.custom-cursor.is-active .custom-cursor-dot { fill: var(--red); }
+
+body.custom-cursor-active,
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active [role="button"] { cursor: none; }
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   [data-reveal] { transition: none; opacity: 1; transform: none; }
   .scroll-cue span { animation: none; }
   .hero-photo { animation: none; }
+  #qui-nous-sommes::before { animation: none; }
 }

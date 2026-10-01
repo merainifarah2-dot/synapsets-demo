@@ -25,6 +25,7 @@
     <div class="header-right">
       <nav class="main-nav" aria-label="Navigation principale">
         <ul>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a></li>
           <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
           <li><a href="projet.html" data-i18n="nav.project">Projets</a></li>
           <li><a href="realisations.html" data-i18n="nav.achievements">Réalisations</a></li>
@@ -33,7 +34,13 @@
         </ul>
       </nav>
 
-      <a href="rejoindre.html" class="btn btn-primary btn-nav" data-i18n="nav.join">Rejoindre</a>
+      <a href="rejoindre.html" class="btn btn-primary btn-nav">
+        <svg class="btn-nav-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M9 3h6" stroke-linecap="round"/>
+          <path d="M10 3v2.4c0 .4-.2.8-.5 1l-.8.6A3 3 0 0 0 7.5 9.4V19a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2V9.4a3 3 0 0 0-1.2-2.4l-.8-.6a1.3 1.3 0 0 1-.5-1V3" stroke-linejoin="round"/>
+        </svg>
+        <span data-i18n="nav.join">Rejoindre</span>
+      </a>
 
       <div class="lang-switch" role="group" aria-label="Choix de la langue / Language selector">
         <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
@@ -48,6 +55,7 @@
 
   <div class="mobile-nav-panel" id="mobile-nav">
     <ul>
+      <li><a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a></li>
       <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
       <li><a href="projet.html" data-i18n="nav.project">Projets</a></li>
       <li><a href="realisations.html" data-i18n="nav.achievements">Réalisations</a></li>
@@ -78,7 +86,6 @@
     </div>
 
     <div class="container hero-inner">
-      <p class="eyebrow" data-reveal data-i18n="home.hero.badge">Podium à ACE · 2023 · 2024</p>
       <h1 data-reveal data-i18n="home.hero.title">Redonner du mouvement, <span class="accent">une articulation à la fois.</span></h1>
       <p class="hero-lead" data-reveal data-i18n="home.hero.lead">
         Le seul club biomédical de l'ÉTS. Nous concevons des technologies pour améliorer la mobilité
@@ -89,29 +96,9 @@
         <a href="rejoindre.html" class="btn btn-outline-light" data-i18n="home.hero.cta2">Rejoindre le club</a>
       </div>
     </div>
-    <a href="#reperes" class="scroll-cue" aria-label="Découvrir SynapsÉTS">
+    <a href="#qui-nous-sommes" class="scroll-cue" aria-label="Découvrir SynapsÉTS">
       <span></span>
     </a>
-  </section>
-
-  <!-- BANDE DE FAITS -->
-  <section class="facts-strip" id="reperes">
-    <div class="container">
-      <div class="facts-grid">
-        <div class="fact-item" data-reveal>
-          <p class="fact-value" data-i18n="home.facts.fact1Value">Podium</p>
-          <p class="fact-label" data-i18n="home.facts.fact1Label">à la compétition internationale d'exosquelettes ACE</p>
-        </div>
-        <div class="fact-item" data-reveal>
-          <p class="fact-value" data-i18n="home.facts.fact2Value">10 ans</p>
-          <p class="fact-label" data-i18n="home.facts.fact2Label">d'existence du club</p>
-        </div>
-        <div class="fact-item" data-reveal>
-          <p class="fact-value" data-i18n="home.facts.fact3Value">Seul club</p>
-          <p class="fact-label" data-i18n="home.facts.fact3Label">biomédical de l'ÉTS</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- QUI NOUS SOMMES -->
@@ -144,45 +131,32 @@
         <ul class="tier-perks build-list" data-reveal>
           <li data-i18n="home.build.point1">Conçu pour soutenir la marche</li>
           <li data-i18n="home.build.point2">Plus léger et moins invasif pour l'utilisateur</li>
-          <li data-i18n="home.build.point3">Plus abordable que la génération précédente</li>
+          <li data-i18n="home.build.point3">Un projet qui réunit plusieurs génies : mécanique, électrique, logiciel et plus</li>
         </ul>
         <a href="projet.html" class="btn btn-outline" data-reveal data-i18n="home.build.button">Voir le projet</a>
       </div>
     </div>
   </section>
 
-  <!-- APERÇU DU PALMARÈS -->
+  <!-- NOS OBJECTIFS -->
   <section class="section">
     <div class="container">
-      <p class="section-tag" data-reveal data-i18n="home.results.tag">Aperçu du palmarès</p>
-      <h2 data-reveal data-i18n="home.results.title">Nos résultats en compétition</h2>
+      <p class="section-tag" data-reveal data-i18n="home.goals.tag">Nos objectifs</p>
+      <h2 data-reveal data-i18n="home.goals.title">Où on s'en va</h2>
 
       <div class="feature-grid results-grid">
         <div class="feature-card" data-reveal>
-          <h3 data-i18n="home.results.result1Title">2026</h3>
-          <p data-i18n="home.results.result1Text">2e place, ACE (résultat à confirmer)</p>
+          <h3 data-i18n="home.goals.goal1Title">Explorer de nouvelles possibilités</h3>
+          <p data-i18n="home.goals.goal1Text">Continuer à faire évoluer l'exosquelette actuel.</p>
         </div>
         <div class="feature-card" data-reveal>
-          <h3 data-i18n="home.results.result2Title">2024</h3>
-          <p data-i18n="home.results.result2Text">1re place, ACE</p>
+          <h3 data-i18n="home.goals.goal2Title">Ouvrir de nouveaux projets</h3>
+          <p data-i18n="home.goals.goal2Text">Explorer d'autres concepts dans le domaine biomédical.</p>
         </div>
         <div class="feature-card" data-reveal>
-          <h3 data-i18n="home.results.result3Title">2023</h3>
-          <p data-i18n="home.results.result3Text">3e place, ACE</p>
+          <h3 data-i18n="home.goals.goal3Title">Faire grandir le club</h3>
+          <p data-i18n="home.goals.goal3Text">Rejoindre plus d'étudiants qui veulent s'impliquer.</p>
         </div>
-      </div>
-
-      <figure class="ambiance-photo" data-reveal>
-        <img
-          src="assets/photos/ace-equipe-2026.jpg"
-          alt="L'équipe SynapsÉTS à ACE 2026"
-          data-i18n-alt="home.results.ambianceAlt"
-          loading="lazy">
-        <figcaption class="ambiance-caption" data-i18n="home.results.ambianceCaption">L'équipe SynapsÉTS à ACE 2026</figcaption>
-      </figure>
-
-      <div class="results-cta" data-reveal>
-        <a href="realisations.html" class="btn btn-outline" data-i18n="home.results.button">Toutes nos réalisations</a>
       </div>
     </div>
   </section>
@@ -197,7 +171,32 @@
       <div class="paths-grid">
         <div class="path-card" data-reveal>
           <h3 data-i18n="home.join.path1Title">Nous suivre</h3>
-          <a href="#" class="btn btn-outline btn-sm" data-i18n="home.join.path1Button" aria-label="Instagram de SynapsÉTS (à venir)">Instagram</a>
+          <div class="path-card-actions">
+            <a href="https://www.instagram.com/synaps_ets?stkn=Mm44cDA2M2xpemRr&amp;utm_source=qr" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/>
+              </svg>
+              <span data-i18n="home.join.path1Instagram">Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/ClubSynapsETS/" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="4"/>
+                <path d="M14 21v-7h2.5l.5-3H14V9.5c0-.9.3-1.5 1.7-1.5H17V5.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.6v7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="home.join.path1Facebook">Facebook</span>
+            </a>
+            <a href="https://www.linkedin.com/company/synapsets/?originalSubdomain=ca" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="4"/>
+                <line x1="7.5" y1="10" x2="7.5" y2="16.5"/>
+                <circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/>
+                <path d="M11.5 16.5V12.8c0-1.3 1-2.3 2.3-2.3s2.2 1 2.2 2.3v3.7" stroke-linecap="round"/>
+              </svg>
+              <span data-i18n="home.join.path1Linkedin">LinkedIn</span>
+            </a>
+          </div>
         </div>
         <div class="path-card" data-reveal>
           <h3 data-i18n="home.join.path2Title">Passer nous voir</h3>
@@ -247,13 +246,33 @@
       <h3 data-i18n="footer.followTitle">Nous joindre</h3>
       <ul class="social-list">
         <li>
-          <a href="#" aria-label="Instagram de SynapsÉTS (à venir)">
+          <a href="https://www.instagram.com/synaps_ets?stkn=Mm44cDA2M2xpemRr&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram de SynapsÉTS">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
               <rect x="3" y="3" width="18" height="18" rx="5"/>
               <circle cx="12" cy="12" r="4"/>
               <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/>
             </svg>
             <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/ClubSynapsETS/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de SynapsÉTS">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="4"/>
+              <path d="M14 21v-7h2.5l.5-3H14V9.5c0-.9.3-1.5 1.7-1.5H17V5.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.6v7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/synapsets/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de SynapsÉTS">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="4"/>
+              <line x1="7.5" y1="10" x2="7.5" y2="16.5"/>
+              <circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/>
+              <path d="M11.5 16.5V12.8c0-1.3 1-2.3 2.3-2.3s2.2 1 2.2 2.3v3.7" stroke-linecap="round"/>
+            </svg>
+            <span>LinkedIn</span>
           </a>
         </li>
         <li>
