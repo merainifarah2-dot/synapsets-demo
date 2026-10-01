@@ -90,19 +90,20 @@
      jonction est de 50° (20° et 70° par rapport à l'horizontale, soit un
      écart de 50°, répartis symétriquement autour de la bissectrice à 45°).
      Le cercle flotte entre les deux traits (comme le cercle du logo entre
-     ses branches) : il est centré sur la bissectrice, assez en retrait de
-     la pointe pour laisser un espace visible avec les deux traits (en
-     tenant compte de leur épaisseur de trait), sans jamais les toucher. */
+     ses branches) : il est centré sur la bissectrice, avec un espace net
+     (~4px, épaisseur de trait comprise) entre son bord et chaque trait —
+     vérifié par calcul, pas seulement par l'œil, pour éviter tout contact
+     visuel une fois le trait et l'anti-aliasing pris en compte. */
   var pointerQuery = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)");
   if (pointerQuery && pointerQuery.matches) {
     var cursorEl = document.createElement("div");
     cursorEl.className = "custom-cursor";
     cursorEl.setAttribute("aria-hidden", "true");
     cursorEl.innerHTML =
-      '<svg width="28" height="28" viewBox="0 0 28 28">' +
-      '<path class="custom-cursor-wing" d="M5 5 L20.97 10.81"/>' +
-      '<path class="custom-cursor-wing" d="M5 5 L10.81 20.97"/>' +
-      '<circle class="custom-cursor-dot" cx="14.71" cy="14.71" r="3.1"/>' +
+      '<svg width="36" height="36" viewBox="0 0 36 36">' +
+      '<path class="custom-cursor-wing" d="M6 6 L26.67 13.52"/>' +
+      '<path class="custom-cursor-wing" d="M6 6 L13.52 26.67"/>' +
+      '<circle class="custom-cursor-dot" cx="20.56" cy="20.56" r="3.4"/>' +
       "</svg>";
     document.body.appendChild(cursorEl);
     document.body.classList.add("custom-cursor-active");
