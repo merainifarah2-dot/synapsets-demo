@@ -399,6 +399,28 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 .page-hero-title { color: #fff; font-size: clamp(2rem, 5vw, 3.1rem); margin-bottom: 18px; }
 .page-hero-lead { color: rgba(255,255,255,0.82); font-size: 1.02rem; line-height: 1.7; max-width: 620px; }
 
+/* Variante photo (page Projet) : même dégradé sombre que .page-hero mais
+   superposé à une photo plutôt qu'à un fond uni, pour garder le texte
+   lisible. Doit rester après .page-hero pour que la cascade gagne (même
+   spécificité, priorité au dernier déclaré). */
+.page-hero-photo {
+  background-image: linear-gradient(160deg, rgba(7,22,48,0.72) 0%, rgba(7,22,48,0.55) 55%, rgba(7,22,48,0.88) 100%), url("../assets/photos/exosqueletteenaction.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Variante photo (page Équipe) : ne touche pas .team-page-hero lui-même,
+   réutilisé tel quel (fond clair) par Réalisations et À propos. */
+.team-page-hero-photo {
+  position: relative;
+  background-image: linear-gradient(160deg, rgba(7,22,48,0.72) 0%, rgba(7,22,48,0.55) 55%, rgba(7,22,48,0.88) 100%), url("../assets/photos/equipepic.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.team-page-hero-photo .section-tag { color: #ff9a9d; }
+.team-page-hero-photo .team-hero-title { color: #fff; }
+.team-page-hero-photo .demo-badge { background: rgba(255,255,255,0.16); color: rgba(255,255,255,0.88); }
+
 /* ---------- Sections génériques ---------- */
 .section { padding: var(--section-pad) 0; }
 .section-sm { padding: var(--section-pad-sm) 0; }
@@ -466,6 +488,17 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 }
 .feature-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.01em; color: var(--navy); margin-bottom: 10px; }
 .feature-card p { color: var(--gray-700); font-size: 0.95rem; line-height: 1.65; }
+
+/* ---------- Réalisations : carte ACE 2026 avec photo ---------- */
+.achievement-card-photo { padding-top: 0; overflow: hidden; }
+.achievement-card-img {
+  display: block;
+  width: calc(100% + 52px);
+  margin: 0 -26px 20px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 85%;
+}
 
 /* ---------- CTA banner réutilisable ---------- */
 .cta-banner { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%); }
@@ -723,11 +756,13 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 
 /* La photo est une carte à coins arrondis à l'intérieur du modal (carte
    dans une carte), avec l'espace de .team-modal (padding) autour d'elle,
-   plutôt que collée aux bords du modal. */
+   plutôt que collée aux bords du modal. Ratio 3:4 identique à celui de la
+   carte dans la grille équipe (.member-card) : même recadrage, le modal
+   s'agrandit au besoin plutôt que de déformer/recadrer différemment. */
 .team-modal-media {
   position: relative;
-  flex: 0 0 38%;
-  min-height: 320px;
+  flex: 0 0 320px;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--navy);
@@ -813,7 +848,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 @media (max-width: 760px) {
   .team-modal-backdrop { padding: 0; }
   .team-modal { flex-direction: column; max-width: 100%; max-height: 100vh; height: 100%; border-radius: 0; padding: 14px; gap: 16px; }
-  .team-modal-media { flex: 0 0 auto; height: 34vh; min-height: 200px; border-radius: var(--radius-md); }
+  .team-modal-media { flex: 0 0 auto; width: 100%; aspect-ratio: 3 / 4; border-radius: var(--radius-md); }
   .team-modal-body { padding: 4px 4px 32px; }
 }
 
@@ -888,9 +923,6 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
 .path-card p { color: var(--gray-700); font-size: 0.94rem; line-height: 1.65; }
 .path-card-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 .btn-sm { padding: 9px 16px; font-size: 0.8rem; }
-
-/* ---------- Rejoindre : hero aligné sur la marge du conteneur ---------- */
-.join-hero-inner { margin-left: 0; }
 
 /* ---------- Rejoindre : gros bouton mailto centré ---------- */
 .join-cta-main { text-align: center; }

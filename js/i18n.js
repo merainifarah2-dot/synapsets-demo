@@ -88,7 +88,8 @@
         title: "Nos réalisations",
         ace2023: { title: "ACE 2023", result: "Résultat à confirmer" },
         ace2024: { title: "ACE 2024", result: "Résultat à confirmer" },
-        ace2025: { title: "ACE 2025", result: "Résultat à confirmer" }
+        ace2025: { title: "ACE 2025", result: "Résultat à confirmer" },
+        ace2026: { title: "ACE 2026", result: "2e place à la compétition ACE" }
       },
       project: {
         hero: {
@@ -277,7 +278,8 @@
         title: "Our achievements",
         ace2023: { title: "ACE 2023", result: "Result to be confirmed" },
         ace2024: { title: "ACE 2024", result: "Result to be confirmed" },
-        ace2025: { title: "ACE 2025", result: "Result to be confirmed" }
+        ace2025: { title: "ACE 2025", result: "Result to be confirmed" },
+        ace2026: { title: "ACE 2026", result: "2nd place at the ACE competition" }
       },
       project: {
         hero: {

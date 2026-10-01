@@ -89,8 +89,10 @@
      normale d'un curseur de souris. L'angle entre les deux traits à leur
      jonction est de 50° (20° et 70° par rapport à l'horizontale, soit un
      écart de 50°, répartis symétriquement autour de la bissectrice à 45°).
-     Le cercle est centré sur cette bissectrice, en retrait de la pointe
-     (dans l'ouverture formée par les deux traits, pas sur le sommet). */
+     Le cercle flotte entre les deux traits (comme le cercle du logo entre
+     ses branches) : il est centré sur la bissectrice, assez en retrait de
+     la pointe pour laisser un espace visible avec les deux traits (en
+     tenant compte de leur épaisseur de trait), sans jamais les toucher. */
   var pointerQuery = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)");
   if (pointerQuery && pointerQuery.matches) {
     var cursorEl = document.createElement("div");
@@ -100,7 +102,7 @@
       '<svg width="28" height="28" viewBox="0 0 28 28">' +
       '<path class="custom-cursor-wing" d="M5 5 L20.97 10.81"/>' +
       '<path class="custom-cursor-wing" d="M5 5 L10.81 20.97"/>' +
-      '<circle class="custom-cursor-dot" cx="11.72" cy="11.72" r="3.1"/>' +
+      '<circle class="custom-cursor-dot" cx="14.71" cy="14.71" r="3.1"/>' +
       "</svg>";
     document.body.appendChild(cursorEl);
     document.body.classList.add("custom-cursor-active");

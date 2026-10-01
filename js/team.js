@@ -18,7 +18,7 @@ var DEPARTMENTS = [
 var LINKEDIN_PLACEHOLDER = "https://www.linkedin.com/company/synapsets/";
 
 var TEAM_MEMBERS = [
-  { name: "Léa Fontaine", role: "Capitaine", program: "Génie mécanique", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "lea.fontaine@synapsets.ca", fun: "Peut réciter toutes les lois de Newton en dansant." },
+  { name: "Tom Tom", role: "Capitaine", program: "Génie mécanique", dept: "exec", photo: "assets/photos/tom.jpg", linkedin: LINKEDIN_PLACEHOLDER, email: "tom.tom@synapsets.ca", fun: "Peut réciter toutes les lois de Newton en dansant." },
   { name: "Malik Dubreuil", role: "Co-capitaine", program: "Génie électrique", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "malik.dubreuil@synapsets.ca", fun: "A soudé son premier circuit à 10 ans, dans la cuisine familiale." },
   { name: "Camille Rivard", role: "Trésorière", program: "Génie des opérations et de la logistique", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "camille.rivard@synapsets.ca", fun: "Tient un budget plus organisé que son propre horaire." },
   { name: "Étienne Boisvert", role: "VP Partenariats", program: "Génie logiciel", dept: "exec", photo: "", linkedin: LINKEDIN_PLACEHOLDER, email: "etienne.boisvert@synapsets.ca", fun: "N'a jamais raté un café avant une présentation." },
