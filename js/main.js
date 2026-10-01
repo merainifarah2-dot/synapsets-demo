@@ -83,7 +83,14 @@
   /* ---------- Curseur personnalisé (desktop uniquement) ----------
      N'active le curseur custom que sur les pointeurs fins avec survol
      (souris/trackpad) : (hover: none) ou pointer:coarse (tactile) gardent
-     le curseur natif intact. */
+     le curseur natif intact.
+     Géométrie : la pointe (sommet des deux traits) est en haut-gauche du
+     repère SVG, les deux traits s'ouvrent vers le bas-droite — orientation
+     normale d'un curseur de souris. L'angle entre les deux traits à leur
+     jonction est de 50° (20° et 70° par rapport à l'horizontale, soit un
+     écart de 50°, répartis symétriquement autour de la bissectrice à 45°).
+     Le cercle est centré sur cette bissectrice, en retrait de la pointe
+     (dans l'ouverture formée par les deux traits, pas sur le sommet). */
   var pointerQuery = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)");
   if (pointerQuery && pointerQuery.matches) {
     var cursorEl = document.createElement("div");
@@ -91,9 +98,9 @@
     cursorEl.setAttribute("aria-hidden", "true");
     cursorEl.innerHTML =
       '<svg width="28" height="28" viewBox="0 0 28 28">' +
-      '<path class="custom-cursor-wing" d="M4 4 L13 14"/>' +
-      '<path class="custom-cursor-wing" d="M4 24 L13 14"/>' +
-      '<circle class="custom-cursor-dot" cx="16" cy="14" r="3.2"/>' +
+      '<path class="custom-cursor-wing" d="M5 5 L20.97 10.81"/>' +
+      '<path class="custom-cursor-wing" d="M5 5 L10.81 20.97"/>' +
+      '<circle class="custom-cursor-dot" cx="11.72" cy="11.72" r="3.1"/>' +
       "</svg>";
     document.body.appendChild(cursorEl);
     document.body.classList.add("custom-cursor-active");
